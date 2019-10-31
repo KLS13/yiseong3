@@ -1,0 +1,58 @@
+<!--  
+	<img> 태그
+	1. 이미지를 삽입한다.
+	2. 속성
+		1) src : 이미지의 위치(경로)
+		2) alt : 이미지 대신 표시할 텍스트
+	3. 경로 표시
+		1) 절대 경로 : D:/JavaWeb-KLS/WebStudy/workspace/html/images
+		2) 상대 경로 : /images/google.jpg  ( /로 시작하면 컨텍스트 루트부터 시작 )
+		3) 주요 폴더
+			- .  : 현재 폴더
+			- .. : 상위 폴더
+			- 
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>image tag</title>
+</head>
+<body>
+	<h1>이미지 표시</h1>
+	<img alt = "구글 이미지" src = "./images/google.png">
+	
+	<h1>서버에 저장된 이미지</h1>
+	<img src = "https://www.google.co.kr/images/branding/googlelogo/2x/googlelogo_color_160x56dp.png">
+	
+	<h1>크기를 조정한 이미지</h1>
+	<img src = "./images/google.png" width = "150"> <!-- 너비나 높이(height) 하나만 조정해도 비율에 맞춰 함께 조정됨. -->
+	
+	
+	<hr />
+	
+	<img src = "./images/google.png" width = "100" align = "top"> 구글 로고1<br />
+	<img src = "./images/google.png" width = "100" align = "bottom"> 구글 로고2<br />
+	<img src = "./images/google.png" width = "100" align = "left"> 구글 로고3<br />
+	<img src = "./images/google.png" width = "100" align = "right"> 구글 로고4<br />
+	
+	<hr />
+	
+
+	
+	<!-- 이미지 맵 -->
+	<!--
+	<img src = " " usemap = "#맵">
+	<map name = "맵>
+		<area href= "연결주소" shape ="모양(rect,cirlce)" coords = "">
+	</map>
+	  -->
+	<!--rect 31 38  93 106 // circle 158 87  20 -->
+	<img src="./images/google.png" usemap="#google">
+	<map name="google">
+		<area href="http://www.naver.com" shape="rect" coords="31, 38, 93, 106">
+		<area href="http://www.naver.com" shape="circle" coords = "158,87,20">
+	</map>
+
+</body>
+</html>

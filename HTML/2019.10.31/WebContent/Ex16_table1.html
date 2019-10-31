@@ -1,0 +1,82 @@
+<!-- 
+	테이블(표) 태그 
+	1. 표를 만들 때 사용한다.
+	2. <table></table> 태그를 사용한다.
+	3. 행을 만들 때 <tr></tr>
+	4. 열을 만들 때 <td></td>
+	5. 제목 열을 만들때  <th></th>
+	6. 행 병합은 rowspan 속성을 이용한다.
+	7. 열 병합은 colspan 속성을 이용한다.	
+	-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>table</title>
+</head>
+<body>
+	<h1>3행 2열 만들기</h1>
+	<table border="1">
+	<tr style="background-color: yellow">
+		<th>성명</th>
+		<th>나이</th>
+	</tr>
+	
+	<tr>
+		<td>홍길동</td>
+		<td>20</td>
+	</tr>
+	
+	<tr>
+		<td>홍길순</td>
+		<td>21</td>
+	</tr>
+	</table>
+	
+	<h1>3행 2열 테이블</h1>
+	<table style = "border: 1px solid black">    <!--  cellpadding="30"> 셀 내부 여백 만들기 -->    
+	<tr>
+		<td>아이디</td>
+		<th>비밀번호</th>
+	</tr>
+	<tr>
+		<td>aaaaa</td>
+		<td>1234</td>
+	</tr>
+	<tr>
+		<td>admin</td>
+		<td>admin</td>
+	</tr>
+	</table>
+	<h1>열 병합 연습</h1>
+	<table border="1">
+		<tr>
+			<th colspan="2">인구조사</th>
+		</tr>
+		
+		<tr>
+			<td>서울</td>
+			<td>1000만</td>
+		</tr>
+		
+		<tr>
+			<td>서울</td>
+			<td>1000만</td>
+		</tr>
+		</table>
+	<h1>행 병합 연습</h1>
+	<table border="1">
+	<tr>
+		<td colspan="2"> 라커 1번 </td>
+	</tr>
+	<tr>
+		<td rowspan="2">홍길동</td>
+		<td> 10월 20일 </td>
+	</tr>
+	<tr>
+		<td>10월 31일</td>
+	</tr>	
+	</table>
+</body>
+</html>
