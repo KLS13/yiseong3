@@ -1,0 +1,74 @@
+<!--   1. HTML5 obsolete tag
+		1) bgcolor : 배경색 ( 딱히 의미없음 )
+		2) width : 너비
+		3) height : 높이
+		4) cellpadding : 셀 내부
+		5) cellspacing : 셀과 셀 사이 간격
+
+<table> 태그 레이아웃
+	1. <thead></thead>
+	2. <tbody></tbody>
+	3. <tfoot></tfoot>
+	4. 작성 순서에 상관없이 위 1~3 순서로 처리된다.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<table border="1" width="20%">
+		<caption>표나 그림 등에 붙이는 제목</caption>
+		
+		<tbody>
+			<tr>
+				<td>A</td>
+				<td>B</td>
+				<td>C</td>
+				<td>D</td>
+			
+		</tbody>
+		<thead>
+			<tr>
+				<td colspan="4">테이블 header</td>	
+			</tr>
+		</thead>
+		<tfoot>
+			<tr>
+				<td colspan="4">테이블 footer</td>
+			</tr>
+		</tfoot>
+		</table>
+		<!-- tbody가 위에서 작성되도 가운데에서 출력됨. -->
+		<hr />
+		<table border="1">
+			<colgroup>
+				<col style="background-color:yellow"> <!-- 1열 -->
+				<col style="background-color:orange"> <!-- 2열 -->
+				<col span="2" style="background-color:green"> <!-- 3열 4열-->
+				<!-- 두줄을 할때는 복붙보다는 span으로 2칸 묶어주면 더 편리 ^ ^ -->
+			</colgroup>
+			<tr>
+				<td>a</td>
+				<td>b</td>
+				<td>c</td>
+				<td>d</td>
+			</tr>
+			<tr>
+				<td>A</td>
+				<td>B</td>
+				<td>C</td>
+				<td>D</td>
+			</tr>
+			<tr>
+				<td>에이</td>
+				<td>비</td>
+				<td>씨</td>
+				<td>디</td>
+			</tr>
+		
+		</table>
+
+</body>
+</html>
