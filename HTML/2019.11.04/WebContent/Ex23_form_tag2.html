@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>from tag</title>
+</head>
+<body>
+	<!-- 1. label 이 없는 경우 -->
+	아이디 <input type = "text" /> <br />
+	
+	<!-- 2-1. label 이 있는 경우 -->
+	<label>아이디 <input type="text" /></label><br />
+	<label> <input type="radio" name="지역"/>인천</label> <br />
+	
+	<!-- 2-2. label 이 있는 경우 -->
+	<label for = "uId">아이디 </label>
+	<input type="text" id="uId" />
+	
+	<br />
+	<hr />
+	<br />
+	
+	<form oninput = "result.value=parseInt(number1.value) + parseInt(number2.value)">
+		<input type="text" id="number1" />
+		+
+		<input type="text" id="number2" />
+		=
+		<output name="result">
+		</output><br />
+		
+	</form>
+	
+	<br />
+	<hr />
+	<form>
+		<input type="text" id="num1" />
+		+
+		<input type="text" id="num2" />
+		=
+		<output name="res"> </output>
+		
+		<input type="button" value="계산" onclick = "res.value=parseInt(num1.value) + parseInt(num2.value)" />
+		<br />
+		
+	</form>
+</body>
+</html>

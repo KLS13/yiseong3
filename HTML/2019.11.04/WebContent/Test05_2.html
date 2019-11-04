@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="#" method="post" enctype="multipart/form-data">
+		<p>
+			<label for="name">이름 : </label>
+			<input type="text" id="name" placeholder="이름" autofocus />
+		</p>
+		<p>
+			<label for="age">나이 : </label>
+			<input type="number" id="age" placeholder="나이" />
+		</p>
+		<p>
+			<label for="pw">비밀번호 : </label>
+			<input type="password" id="pw" placeholder="비밀번호" />
+		</p>
+		<p>
+			<label for="email">이메일 : </label>
+			<input type="email" id="email" placeholder="이메일" />
+		</p>
+		<fieldset>
+			<legend>성별</legend>
+			<label><input type="radio" name="gender" value="남자" checked />남자</label>
+			<label><input type="radio" name="gender" value="여자" />여자</label>
+		</fieldset>
+		<fieldset>
+			<legend>취미</legend>
+			<label><input type="checkbox" name="hobbies" value="1" checked />운동</label>
+			<label><input type="checkbox" name="hobbies" value="2" />영화</label>
+			<label><input type="checkbox" name="hobbies" value="3" />게임</label>
+			<label><input type="checkbox" name="hobbies" value="4" />여행</label>
+		</fieldset>
+		<p><label for="addr">거주지 : </label>
+			<select name="addr" id="addr">
+				<option value="">::선택하세요::</option>
+				<option value="서울">서울</option>
+				<option value="대전">대전</option>
+				<option value="대구">대구</option>
+				<option value="부산">부산</option>
+				<option value="광주">광주</option>
+			</select>
+		</p>
+		<p>
+			<label for="file">이력서 : </label>
+			<input type="file" id="file" />
+		</p>
+		<p>
+			<label for="introduce">자기 소개서</label><br />
+			<textarea rows="3" cols="50" id="introduce" placeholder="150자 이내 작성" ></textarea>
+		</p>
+		<p>
+			<label for="sendDate">제출일 : </label>
+			<input type="date" id="sendDate" />
+		</p>
+		<p>
+			<input type="submit" value="제출" />
+			<input type="reset" value="취소" />
+		</p>
+	</form>
+</body>
+</html>
