@@ -1,0 +1,48 @@
+em 과 rem 차이
+
+1. em : 바로 위 부모 크기에 영향을 받는다.
+2. rem : root element(<html>) 의 크기에 영향을 받는다.
+
+
+1. em
+
+<style>
+	body { font-size: 20px; }
+	div { font-size: 1.1em; }
+</style>
+
+<html>
+<body>								<!-- body  = 20px -->
+	<div>
+		1차 자식 div<br />			<!-- 1.1em = 22px -->
+		<div>
+			2차 자식 div<br />		<!-- 1.1em = 24.2px; -->
+			<div>
+				3차 자식 div<br />	<!-- 1.1em = 26.62px; -->
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
+
+2. rem
+
+<style>
+	html { font-size: 20px; }
+	div { font-size: 1.1rem; }
+</style>
+
+<html>								<!-- html   = 20px (root element) -->
+<body>
+	<div>
+		1차 자식 div<br />			<!-- 1.1rem = 22px -->
+		<div>
+			2차 자식 div<br />		<!-- 1.1rem = 22px -->
+			<div>
+				3차 자식 div<br />	<!-- 1.1rem = 22px -->
+			</div>
+		</div>
+	</div>
+</body>
+</html>

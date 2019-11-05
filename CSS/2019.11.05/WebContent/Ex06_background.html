@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	div {
+	/* box 공통작업일땐 div로 해도됨. */
+		border : 1px solid black;
+	}
+	
+	#box1 {
+	/* 1. div 박스 크기  */
+		width : 500px;
+		height : 500px;
+		
+		background-image: url(./images/pixabay.jpg);
+		background-size : 500px 500px;
+		opacity:0.1;  /* 불투명도 : 값이 낮을 수록 투명함(0~1)*/
+	}
+	#box2 {
+		/* 1. div 박스 크기  */
+		width : 500px;
+		height : 500px;
+		/* 2. background-image 크기 > div 박스 크기 */
+		background-image : url(./images/pixabay.jpg);
+		background-size : cover; /* 박스보다 이미지가 클 때 이미지 크기를 줄여줌 */
+	
+	}
+	#box3 {
+	/* 1. div 박스 크기  */
+		width : 500px;
+		height : 500px;
+		
+	/* 2. background-image 크기 < div 박스 크기 */
+	background-image : url(./images/firefox.png);
+	background-size : contain; /* 채워넣기 */
+	
+	}
+</style>
+</head>
+<body>
+	<div id="box1">
+	박스1
+		
+	</div>
+	
+	<br /><br />
+	
+	<div id="box2">
+	박스2
+	</div>
+	
+	<br /><br />
+	
+	<div id="box3">
+	박스3
+	</div>
+</body>
+</html>

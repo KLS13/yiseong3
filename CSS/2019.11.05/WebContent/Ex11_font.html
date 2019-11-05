@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>font</title>
+<!-- 웹 폰트 -->
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+
+<style type="text/css">
+
+	html {
+		font-size : 16px;
+		}
+
+	body {
+		font-size : 16px;
+	}
+
+	div {
+		
+		font-family: 'Nanum Gothic', sans-serif;  /* 구글폰트 이용 */
+		/*
+			serif : 명조체 계열 글꼴 (꺾임이 있는 폰트)
+			sans-serif : 고딕체 계열 글꼴 ( 꺾임이 없는 폰트)
+		  */
+		 font-style : none; /* none(없음),  italic(기울임) */
+		 font-weight : bold; /* bold(굵게), 100, 200, ... 900 */
+		 font-size : 1.1rem;  /* px pt em rem % vw(스크린 크기 기준 : 1~100, 5vw = 스크린의 5%크기) */
+		 /* 부모의 대문자 M 이 가지고 있는 크기 : em
+		 	부모크기 : 16px   -->  1em 
+		 			1.1em  -->  17.6px
+		 			rem --> 최상위 px 기준 (HTML)
+		  */
+		  
+		  /* 16px = 1em = 100% = 12pt  */
+		 }
+</style>
+
+</head>
+<body>
+	부모 body  <br />
+	<div>
+		1차 자식 div<br />
+		<div>
+			2차 자식 div<br />
+			<div>
+				3차 자식 div<br />
+			</div>
+		</div>
+	</div>
+</body>
+</html>
