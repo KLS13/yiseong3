@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>position</title>
+<style type="text/css">
+	/* 
+		position: absolute;
+		1. 기준 위치에서 원하는 위치를 직접 지정(top, bottom, left, right)
+		2. 기준 위치?
+			1) 가장 가까운 부모 중에서 position: relative; 인 요소
+			2) 1)번 요소가 없으면 화면 전체로 이해
+	 */
+	 .container {
+	 	position : relative;
+	 	width: 500px;
+	 	height: 500px;
+	 	border: 1px solid black;
+	 }
+	.red {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+	}
+	.orange {
+		position: absolute;
+		top: 0px;
+		right: 0px;
+	}
+	.yellow {
+		position: absolute;
+		bottom: 0px;
+		left: 0px;
+	}
+	.green {
+		position: absolute;
+		bottom: 0px;
+		right: 0px;
+	}
+</style>
+</head>
+<body>
+	<div class="container">
+		<div class="red">빨간박스</div>
+		<div class="orange">주황박스</div>
+		<div class="yellow">노란박스</div>
+		<div class="green">초록박스</div>
+	</div>
+</body>
+</html>

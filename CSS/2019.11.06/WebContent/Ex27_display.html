@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+/*  
+	display : inline;
+	
+	1. inline 레벨 : <span>, <b>, <i>, <a>
+	2. 글자에 적용
+	3. inline 다음 요소는 바로 뒤 오른쪽에 표시
+	4. width, height 불가능
+*/
+	.inline {
+		display : inline;
+		width : 100px;   /* display : inline 인 경우에는 처리되지 않는다. */
+		height : 100px;  /* display : inline 인 경우에는 처리되지 않는다. */
+		border : 1px solid black;
+		background: lightgray;
+		padding: 10px;
+	}
+	
+/* 
+	display : block;
+	
+	1. block 레벨 : <div>, <p>, <h>, <li>  
+	2. 가로 영역을 채우는 레벨
+	3. block 다음 요소는 다음 줄에 표시
+	4. width, height 가능
+ */
+ 	.block {
+ 		display : block;
+ 		width : 100px;
+ 		height : 100px;
+ 		border : 1px solid black;
+		background: lightgray;
+ 		}
+/*
+	display : inline-block;
+	
+	1. inline-block 다음 요소는 바로 뒤 오른쪽에 표시 (inline)
+	2. width, height 가능 (block)
+ */
+ 
+ 	.inline-block {
+ 		display : inline-block;
+ 		width : 100px;
+ 		height : 100px;
+ 		border : 1px solid black;
+		background: lightgray;
+ 		
+ 		}
+</style>
+
+</head>
+<body>
+
+<h1> display : inline;</h1>
+<p>국민경제의 발전을 위한<span class="inline">중요</span> 수립에 관하여 대통령의 자문에 응하기 위하여 국민경제자문회의를 둘 수 있다. 근로자는 근로조건의 향상을 위하여 자주적인 단결권·단체교섭권 및 단체행동권을 가진다.</p>
+<br /><br /><br />
+
+<h1> display : block;</h1>
+<p>국민경제의 발전을 위한<span class="block">중요</span> 수립에 관하여 대통령의 자문에 응하기 위하여 국민경제자문회의를 둘 수 있다. 근로자는 근로조건의 향상을 위하여 자주적인 단결권·단체교섭권 및 단체행동권을 가진다.</p>
+<br /><br /><br />
+
+<h1> display : inline-block;</h1>
+<p>국민경제의 발전을 위한<span class="inline-block">중요</span> 수립에 관하여 대통령의 자문에 응하기 위하여 국민경제자문회의를 둘 수 있다. 근로자는 근로조건의 향상을 위하여 자주적인 단결권·단체교섭권 및 단체행동권을 가진다.</p>
+
+</body>
+</html>

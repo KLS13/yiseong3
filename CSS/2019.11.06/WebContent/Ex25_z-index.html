@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+	/* z 방향(앞뒤 겹침 순서)의 순서를 결정하는 인덱스 값
+	      정수 값을 가짐
+	      값이 클수록 앞으로 나옴
+	      언제나 앞에 
+	       */
+	 .container {
+	 	position : relative;
+	 	width: 1500px;
+	 	height: 1500px;
+	 	border: 1px solid white;
+	 }
+	 
+	.red {
+		z-index : 3;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		background: red;
+		width:300px;
+		height:300px;
+	}
+	.orange {
+		z-index : 2;
+		position: absolute;
+		top: 50px;
+		left: 50px;
+		width:300px;
+		height:300px;
+		background: orange;
+	}
+	.yellow {
+		z-index : 1;
+		position: absolute;
+		top: 100px;
+		left: 100px;
+		width:300px;
+		height:300px;
+		background: yellow;
+	}
+</style>
+</head>
+<body>
+	<div class="container">
+		<div class="red">빨간박스</div>
+		<div class="orange">주황박스</div>
+		<div class="yellow">노란박스</div>
+	</div>
+</body>
+</html>
