@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>pseudo</title>
+<style type="text/css">
+/* 
+	<a> 태그의 가상 클래스
+	
+	1. a:link 		방문하기 전
+	2. a:visited	방문한 적 있는
+	3. a:hover		마우스 오버 (올려놓기)
+	4. a:active		마우스 누를 때
+ */
+ 
+ 	div {
+ 		width : 100px;
+ 		background: red;
+ 	}
+	/* 방문 전 */
+ 	div a.btn1:link {
+ 		display	: block;
+ 		padding	: 10px;
+ 		text-align : center;
+ 		background: red;
+ 		text-decoration: none;
+ 	}
+ 	/* 방문 후 */
+ 	div a.btn1:visited {
+ 		background: pink;
+ 		color : black;
+ 	}
+ 	
+ 	div a.btn1:hover {
+ 		background: black;
+ 		color : white;
+ 	}
+ 	/* 마우스 누르고 있을때 */
+ 	div a.btn1:active {
+ 		background: white;
+ 		color : black;
+ 		border:1px solid black;
+ 	}
+ 	
+ 		div a.btn2:link {
+ 		display	: block;
+ 		padding	: 10px;
+ 		text-align : center;
+ 		background: red;
+ 		text-decoration: none;
+ 	}
+ 	
+ 	div a.btn2:visited {
+ 		background: pink;
+ 		color : black;
+ 	}
+ 	
+</style>
+
+</head>
+<body>
+	<div><a class="btn1" href="#" target="_blank">버튼</a></div>
+	<br />
+	<div><a class="btn2" href="http://www.naver.com" target="_blank">버튼</a></div>
+
+</body>
+</html>

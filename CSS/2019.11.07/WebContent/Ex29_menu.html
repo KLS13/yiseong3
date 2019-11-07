@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+	ul{
+		list-style-type: none;
+		background : gray;
+		overflow : hidden; /* 부모태그 : overflow : hidden; */
+	}
+	
+	ul li {
+		float : left;	/* 자식태그 : float : left */
+	}
+	
+	li a { /* a태그는 inline 레벨이므로,  diplay: block; 처리 후에 width, height를 사용할 수 있다. */
+		/*
+		display : block;
+		width : 100px;
+		height : 50px;
+	*/
+		display : block;
+		padding: 20px;
+		text-align : center;
+		text-decoration : none;
+		color : white;
+		}
+	
+	li a:hover {
+		background: lightgray;
+		color: black;	
+	}
+	div{
+		border : 1px solid black;
+		/* clear : left;  div를 메뉴 아래로 배치하기 위한 속성 */
+	}
+</style>
+</head>
+<body>
+
+	<ul>
+		<li><a href="#">Home</a></li>
+		<li><a href="#">Board</a></li>
+		<li><a href="#">Guest</a></li>
+		<li><a href="#">About</a></li>
+	</ul>	
+	<div>
+		본문
+	</div>
+</body>
+</html>

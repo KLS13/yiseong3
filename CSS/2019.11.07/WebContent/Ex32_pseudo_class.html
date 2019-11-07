@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>psdudo class</title>
+<style type="text/css">
+/* 
+	1. E:nth-child(n) 		: n번째 요소
+	2. E:nth-child(odd)		: 홀수번째 요소
+	3. E:nth-child(even)	: 짝수번째 요소
+	4. E:nth-child(an+b)    : b번째부터 a단위 요소
+ 	5. E:nth-of-type(n)		: E타입 요소 중에서 n 번째 요소
+ */
+ 	body p:nth-child(2){
+ 		color : red; 	
+ 	}
+ 	body p:nth-of-type(2) {	/* body 아래 p태그 중 두번째 자식 (p,p,p,p) */
+ 		color : blue;
+ 	}
+ 	body p:nth-child(2n+0) {
+ 		font-weight : 900;
+ 	}
+</style>
+</head>
+<body>
+	<div>이것은 div</div>
+	<p>이것은 첫 번째 p</p>
+	<p>이것은 두 번째 p</p>
+	<p>이것은 세 번째 p</p>
+	<p>이것은 네 번째 p</p>
+
+</body>
+</html>
