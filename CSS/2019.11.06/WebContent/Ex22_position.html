@@ -2,51 +2,67 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>position</title>
 <style type="text/css">
-	.container {
-		position : relative; /* position : relative */
-		/* 1. 기존 요소를 참고해서 알아서 배치 
-		   2. 기존 요소를 기준으로 top, bottom, left, right 값을 사용
-			*/
-		width : 500px;
-		height : 500px;
-		border : 1px solid black;
+
+	/*
+		position: static;
+		
+		1. 기본 설정 값
+		2. 왼쪽->오른쪽, 위->아래 방향으로 알아서 배치
+		3. 임의의 위치로 배치 불가
+	*/
+
+	/*
+		position: relative;
+		
+		1. 기존 요소를 참고해서 알아서 배치
+		2. 본래 나타나야 할 자신의 위치를 기준으로 top, bottom, left, right 값을 사용
+	*/
+	* {
+		margin:0; padding: 0;
 	}
-	.red {
-		width : 100px;
-		height : 100px;
+	.box {
+		width: 100px;
+		height: 100px;
+		border: 1px solid black;
+	}
+	#red {
+		position: relative;
+		top: 100px;
+		left: 100px;
 		background: red;
-		}
-	.orange {
-		position : relative;
-		top : 50px;		
-		width : 100px;
-		height : 100px;
-		background:orange;
-		}
-	.yellow {
-		position : relative;
-		top : 50px;
-		width : 100px;
-		height : 100px;
-		background:yellow;
-		}
-	.green {
-		position : ;
-		top : 50px;
-		width : 100px;
-		height : 100px;
-		background:green;
-		}
+	}
+	#orange {
+		position: relative;
+		top: 100px;
+		left: 100px;
+		background: orange;
+	}
+	#yellow {
+		position: relative;
+		top: 100px;
+		left: 100px;
+		background: yellow;
+	}
+	#green {
+		position: relative;
+		top: 100px;
+		left: 100px;
+		background: green;
+	}
 </style>
 </head>
 <body>
-	<div class="container">
-		<div class="red">빨간박스</div>
-		<div class="orange">주황박스</div>
-		<div class="yellow">노란박스</div>
-		<div class="green">초록박스</div>
+
+	<div class="box" id="red">
+		<div class="box" id="orange">
+			<div class="box" id="yellow">
+				<div class="box" id="green">
+				</div>
+			</div>
+		</div>
 	</div>
+
 </body>
 </html>
