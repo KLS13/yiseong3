@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	div {
+	 	width : 50px;
+	 	height : 50px;
+	 	background-color: pink;
+	 
+	 	transition-property : width;	/* width를 변경하겠다.*/
+	 	transition-duration : 5s;		/* width가 5초간 변경된다. */
+	 	transition-timing-function : ease; /*
+	 										1. ease : slow -> fast -> slow (기본값)
+	 										2. ease-in : slow start
+	 										3. ease-out : slow stop
+	 										4. linear : smae speed
+	 										5. steps(n,end) : n 번에 걸쳐서 처리함
+	 										  */
+	 	transition-delay : 1s;       	/* transition이 1초 후 적용 */	 
+	 	
+	 	
+
+	 	transition : width 5s steps(4, end) 1s;	
+	}
+	div:hover {
+		width:300px;
+	}
+	
+	div.trans-box {
+		margin : auto;
+		width : 100px;
+		height : 100px;
+		background-color: pink;
+		-webkit-transition : width 3s, height 3s,-webkit-transform 3s;
+		transition : width 3s, height 3s,transform 3s;
+	}
+	div.trans-box:hover {
+		width:300px;
+		height:300px;
+		transform : rotate(720deg) scale(5,5);
+	}
+</style>
+</head>
+<body>
+	<h1> transition </h1>
+	<div>1초 뒤에 너비 300px 로 커지는 박스</div>
+	<br /> <br /><br />
+	<h1> transform + transition</h1>
+	<p> 마우스를 대면 곧바로 3초 동안 회전하면서 3배로 커지는 박스
+	<div class="trans-box"></div>
+	
+</body>
+</html>

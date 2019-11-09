@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	/* 연습문제 */
+	.open-answer, .open-answer .answer {
+		display: inline-block;
+	}
+	.open-answer .answer {
+		width: 100px;
+		padding: 10px;
+		background: yellow;
+		text-align: center;
+		visibility: hidden;
+	}
+	.open-answer:hover .answer {
+		visibility: visible;
+	}
+	
+</style>
+
+</head>
+<body>
+	<h1>연습문제</h1>
+	<h1>대한민국의 수도는?</h1>
+	<div class="open-answer">
+		이 곳에 마우스를 가져오면 정답을 공개합니다.
+		<div class="answer">정답 : 서울</div>
+	</div>	
+</body>
+</html>

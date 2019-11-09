@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>transition</title>
+<style type="text/css">
+	div.wrap {
+		width: 1000px;
+		height: 500px;
+		margin: auto;
+		text-align: center;
+		border: 1px solid gray;
+	}
+	
+	/*
+		ul 내부의 li 한 줄에 배치하기 ( 정렬은 불가능 )
+		1. ul	overflow: hidden;
+		2. li	float: left;
+	*/
+	/*
+		ul 내부의 li 가운데 정렬해서 한 줄에 배치하기
+		1. ul  text-align: center;
+		2. li  display : inline-block;  but >>  float : left 을 함께 사용하면 안 됨.
+	*/
+	ul.product-list {
+		list-style-type: none;
+		margin : 0;
+		padding : 0;
+		width: 100%;
+		height: 100%;
+		text-align : center
+	}
+	ul.product-list li {
+		position: relative;
+		width: 300px;
+		margin: 10px;
+		padding: 0;
+		display : inline-block;
+	}
+	ul.product-list li img {
+		z-index: 1;
+		width: 300px;
+		height: 200px;
+	}
+	ul.product-list li div.desc {
+		display :none;
+		/* opacity : 0; */
+		z-index: 2;
+		position: absolute;
+		top: 200px;
+		width: 300px;
+		height: 200px;
+		background-color: rgba(0, 0, 0, 0.5);	/* 검정색 반투명 */
+		transition : all 1s;
+		
+	}
+	
+	ul.product-list li:hover div.desc{
+		display : block; 
+		/*opacity : 1;*/
+		transform : translate(0,-200px);
+	}
+	
+	ul.product-list li div.desc h1, ul.product-lisr li div.desc {
+		color : white;
+		font-weight : bold;
+	}
+	
+</style>
+</head>
+<body>
+	<div class="wrap">
+		<h1>과일</h1>
+		<ul class="product-list">
+			<li>
+				<img src="./images/fruit1.jpg" alt="과일이미지1">
+				<div class="desc">
+					<h1>과일</h1>
+					<p>과일1</p>
+					<p>가격: 10,000원</p>
+				</div>
+			</li>
+			<li>
+				<img class="img-box" src="./images/fruit2.jpg" alt="과일이미지2">
+				<div class="desc">
+					<h1>과일</h1>
+					<p>과일2</p>
+					<p>가격: 20,000원</p>
+				</div>
+			</li>
+			<li>
+				<img src="./images/fruit3.jpg" alt="과일이미지3">
+				<div class="desc">
+					<h1>과일</h1>
+					<p>과일3</p>
+					<p>가격: 30,000원</p>
+				</div>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+	.content {
+	width : 200px;
+	height : 25px;
+	border : 1px solid black;
+	position: relative;
+	}
+	
+	.content .tip {
+		position: absolute;
+		top : 0px;
+		left : 220px;
+		display : none;
+		width : 100px;
+		background-color : black;
+		color : white;
+		border-radius: 8px;
+		padding: 10px;
+	}
+	
+	.content:hover .tip {
+		display: block;
+		}
+</style>
+</head>
+<body>
+
+	<div class="content">콘텐츠
+		<div class="tip">풍선 도움말</div>
+	</div>
+	
+</body>
+</html>

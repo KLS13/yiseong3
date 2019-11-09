@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	div {
+		width : 200px;
+		height : 200px;
+		background: pink;
+		margin-left: 50px;
+	}
+	div.rotate-box {
+		-webkit-transform : rotate(10deg);
+		-ms-transform : rotate(10deg);
+		transform : rotate(10deg); /* 시계방향 10도 */
+		
+	}
+	div.translate-box:hover{
+		-webkit-transform : rotate(100px, 100px);
+		-ms-transform : rotate(100px, 100px);
+		transform : translate(100px, 100px);  /* ( x , y) */
+	}
+	
+	div.scale-box {
+		-webkit-transform : rotate(0.5, 0.5);
+		-ms-transform : rotate(0.2,0.2);
+		transform : scale(0.1 , 0.1);
+		}
+	
+</style>
+</head>
+<body>
+	<h1>회전 : rotate </h1>
+	<div class = "rotate-box"></div>
+	<br /><br />
+	<h1> 이동 : translate </h1>
+	<div class="translate-box"></div>
+	<br /><br /><br />
+	<h1> 크기 : scale </h1>
+	<div class="scale-box"></div>
+</body>
+</html>

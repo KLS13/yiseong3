@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	div {
+		width : 400px;
+		height : 200px;
+	}
+	
+	.grad1 {
+		background-image: radial-gradient(red, yellow);  /* 타원 */
+	}
+	.grad2 {
+		background-image: radial-gradient(circle,red,yellow);  /* 정원 */
+	}
+	
+	.grad3 {
+		background-image: radial-gradient(circle at 10% 10%, red,yellow);
+	}
+	
+	.grad4 {
+		background-image : repeating-radial-gradient(circle, red, yellow 3%);
+	}
+</style>
+</head>
+<body>
+	<h1>radial gradient</h1>
+	<div class="grad1"></div>
+	<br />
+	<div class="grad2"></div>
+	<br />
+	<div class="grad3"></div>
+	<br />
+	<div class="grad4"></div>
+	<br />
+</body>
+</html>
