@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	body {
+		background: gray;
+		margin : 0px;
+		padding: 0px;
+	}
+
+	fieldset {
+		background: lightgray;
+		border : none;
+		border-radius: 5px;
+		width : 350px;
+		margin:auto;
+		padding: 15px;
+	}
+	
+	.screen-out{
+		display: none;
+	}	/* 
+	.screen-out {
+ 		position: absolute;
+ 		width: 0px;
+ 		height: 0px;
+ 		overflow: hidden;
+ 	}
+	 */
+	 
+	 
+	#loginId, #loginPw, button {
+		display : block;
+		width : 100%;
+		padding : 20px;
+		border : none;
+		box-sizing : border-box;
+		margin-bottom : 5px;
+	}
+	button {
+		margin-top : 40px;
+		background: white;
+		border-radius: 5px;
+		color : gray;
+		font-size : 1.2em;
+	}
+	
+	.login-append {
+		overflow: hidden;
+		margin-top : 25px;
+	}
+	
+	.login-append .login-check {
+		float : left;
+	}
+	
+	.login-append .login-find{
+		float : right;
+		
+	}
+
+	button[type=submit]:hover {
+		background: gray;
+		color : white;
+	}
+	
+	.login-find-link:hover {
+		color : green;
+	}
+
+	.login-find {
+ 		/* <a> 태그 사이 슬래시(/) */
+ 		color: black;
+}
+</style>
+</head>
+<body>
+	<form action="#" method ="post">
+		<fieldset>
+			<legend class="screen-out">로그인 정보 입력폼</legend>
+			<label for="loginId" class="screen-out">로그인</label>
+			<input type="email" id="loginId" placeholder="example@naver.com">
+			<label for="loginPw" class="screen-out">비밀번호</label>
+			<input type="password" id="loginPw" placeholder="password">
+			<button type="submit">로그인</button>
+			<div class="login-append">
+				<div class="login-check">
+					<input type="checkbox" id="keep-login">
+					<label for="keep-login">로그인 유지</label>
+				</div>
+				<div class="login-find">
+					<a href="#" class="login-find-link">아이디 찾기</a>
+					&nbsp;/&nbsp;
+					<a href="#" class="login-find-link">비밀번호 찾기</a>
+				</div>
+			</div>
+		</fieldset>
+	</form>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	ul {
+		list-style-type: none;
+	}
+	ul li {
+		margin : 0px;
+	}
+	.input-label {
+		color : red;
+	}
+	
+	.blind-label {
+		display : none;
+	}
+</style>
+</head>
+<body>
+	<form action="#" method="post">
+		<ul>
+			<li>
+				<h3><label for="uId" class="input-label">로그인</label></h3>
+				<input type="text" id="uId" name="jsp변수" size="30">			
+			</li>
+
+			<li>
+				<h3><label for="uPw" class="input-label">비밀번호</label></h3>
+				<input type="password" id="uPw" name="jsp변수" size="40">
+			</li>
+		</ul>
+		<hr />
+		<fieldset>
+			<legend class="blind-label">등록 정보</legend>
+			<ul>
+				<li>
+					<h3><label for="uAge">나이</label></h3>
+					<input type="number" id="uAge" min="1" max="100">
+				</li>		
+				<li>
+					<h3><label for="uEmail">이메일</label></h3>
+					<input type="email" id="uEmail">  <!-- html5 : email  , 자스로 추가작업을 할려면 js : text -->
+				</li>
+			</ul>
+		</fieldset>
+	</form>
+</body>
+</html>

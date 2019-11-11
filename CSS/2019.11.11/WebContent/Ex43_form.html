@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+	.container {
+	 	width : 500px;
+	 	background: lightgray;
+	 	border-radius: 5px;
+	 	padding : 20px;
+	 	margin : auto;
+	}
+	
+	input, select {
+		display : block;
+		box-sizing : border-box;
+		width : 100%;
+		padding: 10px;
+		margin-bottom : 10px;
+		border-radius: 5px;
+		border: 1px solid gray;
+	}
+	
+	input[type=submit] {
+		margin-top : 30px;
+		background: red;
+		color : black;
+		border : none;
+	}
+	input[type=submit]:hover {
+		background: darkred;
+		border : 1px solid darkred;
+	}
+	
+	input[type=text]:focus {
+		font-size : 1.5em;
+		background: yellow;
+	}
+	/* 
+	.container label {
+		display : block;
+		width : 400px;
+		float : left;
+		
+		
+	}
+	
+	
+	
+	input {
+		
+		width : 488px;
+		border-radius: 4px;
+		border: 1px solid black;
+		height : 35px;
+		margin-top : 10px;
+		margin-bottom : 10px;
+		padding-left : 12px;
+		
+		}
+	
+	select {
+		width : 500px;
+		height : 35px;
+		margin-top : 10px;
+		margin-bottom : 10px;
+		padding-left : 12px;
+	}
+	*/
+	
+</style>
+</head>
+<body>
+	<div class="container">
+		<form>
+			<label for="name">이름</label>
+			<input type="text" id="name" placeholder="이름">
+			
+			<label for="age">나이</label>
+			<input type="number" id="age" placeholder="나이">
+		
+			<label for="addr">주소</label>
+		
+		
+			<select id="addr">
+				<option value="">::주소선택::</option>
+				<option value="서울">서울</option>
+				<option value="인천">인천</option>
+				<option value="경기">경기</option>
+				<option value="강원">강원</option>
+			</select>
+			<input type="submit" value="전송">
+		</form>
+	</div>
+</body>
+</html>

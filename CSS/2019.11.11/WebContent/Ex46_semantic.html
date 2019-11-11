@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>semantic</title>
+<style type="text/css">
+	.wrap {
+		width: 1000px;
+		margin: auto;
+	}
+	header, nav, section, article, aside, footer {
+		box-sizing: border-box;
+		border: 2px solid gray;
+		padding: 10px;
+		margin: 5px;
+	}
+	section {
+		float: left;
+		width: 700px;
+		height: 500px;
+	}
+	aside {
+		float: right;
+		width: 250px;
+		height: 500px;
+	}
+	footer {
+		clear: both;
+	}
+</style>
+</head>
+<body>
+
+	<div class="wrap">
+	
+		<!-- 헤더 구역 -->
+		<header>
+			<h1>header 제목</h1>
+			<input type="text"><button>검색</button>
+			<nav>
+				<ul>
+					<li><a href="#">메뉴1</a></li>
+					<li><a href="#">메뉴1</a></li>
+					<li><a href="#">메뉴1</a></li>
+					<li><a href="#">메뉴1</a></li>
+				</ul>
+			</nav>
+		</header>
+		
+		<!-- 본문 구역 -->
+		<!-- 1. section 내부에 article -->
+		<!-- 2. article 내부에 section -->
+		<section>
+			<h2>section 제목</h2>
+			<article>
+				<h3>article 제목1</h3>
+				<p>article 내용1</p>
+			</article>
+			<article>
+				<h3>article 제목2</h3>
+				<p>article 내용2</p>
+			</article>
+		</section>
+		
+		<!-- 사이드 구역 -->
+		<aside>
+			<h3>aside 제목</h3>
+			<p>aside 내용</p>
+			<img src="" alt="">
+			<img src="" alt="">
+			<img src="" alt="">
+		</aside>
+		
+		<!-- 푸터 영역 -->
+		<footer>
+			<p>제작 정보, 회사 정보, 저작권</p>
+			<address>제작자 연락처</address>
+		</footer>
+		
+	</div>
+
+</body>
+</html>
