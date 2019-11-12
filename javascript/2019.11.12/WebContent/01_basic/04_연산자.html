@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>js 연산자</title>
+<script type="text/javascript">
+	/*
+	1. 문자열 연결 연산자 : +
+	
+	2. 산술연산자 : +  -  *  /  %
+ 		// 몫을 구하는 방법 : 1) parseInt(a / b) : 정수로 변환	2) Math.floor(a / b) : 내림 처리
+ 		*/
+	document.write("나누기 = " + (7/2) + "<br />");
+ 	document.write("나머지 = " + (7%2) + "<br />");
+ 	document.write("몫 = " + parseInt(7 / 2) + "<br />");
+ 	document.write("몫 = " + Math.floor(7 / 2) + "<br />");
+ 	
+ 	//테스트
+	 	
+ 	document.write("<h1>테스트</h1><br />");
+ 	document.write(10 + 20 + "<br />");	// 30
+ 	document.write("10" + 20 + "<br />"); //1020
+ 	document.write(10 + "20" + "<br />"); //1020
+ 	document.write("10" + "20" + "<br />"); // 1020
+ 	
+ 	document.write(10 + 20 + "30" + "<br />"); // 3030
+ 	document.write(10 + "20" + 30 + "<br />"); // 102030
+ 	document.write("10" + 20 + 30 + "<br />"); // 102030
+ 	
+ 	document.write("10" - 2 + "<br />"); // 8     자동변환
+ 	document.write("10" * 2 + "<br />"); // 20
+ 	document.write("10" / 2 + "<br />"); // 5
+ 	document.write("10" % 2 + "<br />"); // 0
+ 	
+ 	// 3. 관계 연산자 :  >, >= ,  <, <=  ==  !=
+ 	document.write(10 >= 9 >= 8 + "<br />");   // 10>=9 는 true (즉 1)  true >= 8 은?  false
+ 	document.write("<br />");
+ 			
+ 	// 4. 논리 연산자 : &&(그리고 AND)  ||(또는 OR)  ! (아니다 NOT)
+ 	// 짧은 연산 지원
+ 	// 1) && : 조건식이 false 가 되면 더이상 연산하지 않는다.  어차피 false 니까.
+ 	// 2) || : 조건식이 true 가 되면 더이상 연산하지 않는다.   어차피 true 니까.
+ 	
+ 	// 5. ===  !==
+ 	var a = true;
+ 	var b = 1;
+ 	
+ 	document.write("true==1:" + (a==b) + "<br />"); // 값만 비교
+ 	document.write("true===1:" + (a===b) + "<br />"); // 타입과 값 둘다 비교
+ 	
+ 	// 6. 복합 연산자 : +=  -=  *=  /=   %=
+ 	// 7. 삼항 연산자 : 조건식 ? true : false
+// 7. 삼항 연산자 : 조건식 ? true : false
+	
+	// 최저 시급 : 8590원
+	// 하루 8시간 근무까지는 최저 시급을 그대로 적용 받고,
+	// 8시간이 초과된 근무는 최저 시급의 1.5배를 적용 받는다.
+	// 하루에 10시간 근무하면 일급 얼마입니까?
+	var workTime = 10;
+	var payPerHour = 8590;
+	var pay = (workTime <= 8) ? workTime * payPerHour : workTime * payPerHour + (workTime - 8) * payPerHour * 0.5;
+	document.write("일급 : " + pay + "원<br />");
+			
+</script>
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

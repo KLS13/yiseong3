@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+/*
+	기본자료형
+	1.숫자		number
+	2.문자		string
+	3.논리		boolean
+	4.널			null
+	5.언디파인드	undefined
+	
+	변수
+	1. 변수 선언시 자료형을 명시하지 않는다.
+	2. 저장되는 값에 의해서 자료형이 결정된다.
+	3. 선언방법
+		var 변수명;
+	4. 문자 + 숫자 + 특수문자 ( _ , & )를 조합할 수 있다.
+	5. 첫 글자는 숫자일 수 없다.
+	6. 공백문자는 사용할 수 없다.
+	7. 선언하지 않은 변수도 사용할 수 있다.
+*/
+	var a;    // a 변수 선언
+	document.write(a);  			//값 : undefined
+	document.write(typeof(a));   //자료형 : undefined
+	
+	document.write("<br />");
+	/* 
+		변수의 초기화
+		1. 객체 : null
+		2. 숫자 : 0
+		3. 문자열 : null
+		4. 논리형 : false
+	*/
+	a = null;
+	document.write(a);    	 	//값 : null
+	document.write(typeof(a));  //자료형 : object(객체)
+	document.write("<br />");
+	
+	/* 
+		문자열은 쌍따옴표(" ")와 홑따옴표(' ')를 모두 사용할 수 있다.
+		문자는 별도로 존재하지 않는 자료형이다.
+	*/
+	
+	document.write("hello js <br />");   
+	document.write('hello "js"<br />');
+	document.write('hello js<br />');
+	document.write("hello 'js'<br />");
+</script>
+</head>
+<body>
+
+</body>
+</html>

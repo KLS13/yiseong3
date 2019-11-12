@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	/*
+		대화상자
+		1. alert("경고 메시지") : 경고 메시지를 출력한다.
+		2. confirm("확인 메시지") : 사용자에게 확인을 받는다.
+			1) 확인 : true
+			2) 취소 : false
+		3. prompt("입력 메시지", "기본 입력 값") : 사용자에게 입력을 받는다.
+	*/
+	var result = confirm("계속 진행할까요?");
+	document.write("<h3>" + result + "</h3>");
+	
+	var a = prompt ("숫자를 입력하세요", "1");
+	document.write("<h3>" + a + "</h3>");
+	document.write("<h3>" + typeof(a) + "</h3>");
+	
+	// 정수로 입력 받는 방법 : Number , parseInt
+	var b = Number(prompt("숫자를 입력하세요"));
+	document.write("<h3>" + b + "</h3>");
+	document.write("<h3>" + typeof(b) + "</h3>");
+</script>
+</head>
+<body>
+
+</body>
+</html>
