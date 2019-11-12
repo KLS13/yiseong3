@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>상품 주문</title>
+    <style>
+        body {
+            background-color:lightgray;
+        }
+        .container {
+            width: 600px;
+            margin: auto;
+        }
+        .main-title {
+            text-align: center;
+            color: darkslategray;
+            text-shadow: 2px 2px 2px darkgray;
+        }
+        .sub-title {
+            font-size: 20px;
+            font-weight: 900;
+            color: crimson;
+            text-shadow: 2px 2px 2px darkgray;
+            margin-top: 20px;
+            margin-bottom: 5px;
+        }
+        .screen-out {
+            display: none;
+        }
+        ul {
+            list-style-type: none;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+        label.title {
+            font-weight: bold;
+            width: 80px;
+            float: left;
+            text-align: left;
+        }
+        div.centered {
+            text-align: center;
+        }
+        input[type=text], input[type=tel], textarea {
+            width: 400px;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            var check = document.getElementById("same");
+            check.onclick = function() {
+                if ( check ) {
+                    document.getElementById("name2").value = document.getElementById("name1").value;
+                    document.getElementById("tel2").value = document.getElementById("tel1").value;
+                    document.getElementById("addr2").value = document.getElementById("addr1").value;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+       <form action="./index.html" method="post">
+        <h1 class="main-title">상품 주문서</h1>
+        <div class="sub-title">개인 정보</div>
+        <fieldset>
+            <legend class="screen-out">개인 정보</legend>
+            <ul>
+                <li>
+                    <label for="name1" class="title">이름</label>
+                    <input type="text" id="name1" placeholder="필수" autofocus />
+                </li>
+                <li>
+                    <label for="tel1" class="title">연락처</label>
+                    <input type="tel" id="tel1" placeholder="필수" />
+                </li>
+                <li>
+                    <label for="addr1" class="title">주소</label>
+                    <input type="text" id="addr1" placeholder="필수" />
+                </li>
+            </ul>
+        </fieldset>
+        
+        <div class="sub-title">배송지 정보</div>
+        <input type="checkbox" id="same"/><label for="same">주문자 정보와 같음</label>
+        <fieldset>
+            <legend class="screen-out">배송지 정보</legend>
+            <ul>
+                <li>
+                    <label for="name2" class="title">이름</label>
+                    <input type="text" id="name2" />
+                </li>
+                <li>
+                    <label for="tel2" class="title">연락처</label>
+                    <input type="tel" id="tel2" />
+                </li>
+                <li>
+                    <label for="addr2" class="title">주소</label>
+                    <input type="text" id="addr2" />
+                </li>
+                <li>
+                    <label for="comment" class="title">메모</label>
+                    <textarea cols="40" rows="5" id="comment" placeholder="경비실에 맡겨주세요. 2층에 맡겨주세요."/></textarea>
+                </li>
+            </ul>
+        </fieldset>
+        <br />
+        <div class="centered">
+            <input type="submit" value="주문하기" />
+            <input type="reset" value="다시작성" />
+        </div>
+        </form>
+    </div>
+</body>
+</html>

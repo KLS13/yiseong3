@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>최저가 홈페이지에 오신 걸 환영합니다</title>
+<style type="text/css">
+    * {
+		box-sizing: border-box;
+        color: black;
+        text-decoration: none;
+	}
+	body {
+		margin: 0;
+	}
+    .top {
+        padding: 10px;
+        font-weight: bold;
+        background-color: lightgray;
+    }
+	.header {
+        position: relative;
+		padding: 20px;
+        height: 150px;
+		text-align: center;
+        background-color: lightgray;
+	}
+    .logo-img {
+        position: absolute;
+        left: 50px;
+        width: 200px;
+    }
+    input[type=text] {
+        height: 40px;
+        border: 2px solid #333;
+        border-radius: 5px;
+        background-color: white;
+        background-image: url('searchicon.png');
+        background-position: 10px; 
+        background-repeat: no-repeat;
+        padding: 12px 20px 12px 50px;
+    }
+    button {
+        height: 40px;
+    }
+	.navigation {
+		background-color: #333333;
+        position: relative;
+		overflow: hidden;
+	}
+	.navigation a {
+		text-decoration: none;
+		display: block;
+		float: left;
+		padding: 14px 16px;		
+		color: #f2f2f2;
+	}
+	.navigation a:hover {
+		background-color: red;
+	}
+	.column {
+		float: left;
+		width: 25%;
+		padding: 15px;
+	}
+    .column ul {
+        list-style-type: square;
+    }
+    .column .product-img {
+        width: 80%;
+    }
+    .column .btn-center {
+        text-align: center;
+    }
+	.footer {
+        display: block;
+		background-color: lightgray;
+		padding: 10px;
+		text-align: center;
+        clear: both;
+	}
+	
+	/* 미디어쿼리 */
+    @media screen and (max-width: 767px) {
+		.column {
+			width: 100%;    /* 가로 너비가 767 이하이면 한 줄에 한 제품만 나타난다. */
+		}
+	}
+	@media screen and (min-width: 768px) and (max-width: 959px) {
+		.column {
+			width: 50%;    /* 가로 너비가 768 ~ 959px 이면 한 줄에 두 제품씩 나타난다. */
+		}
+	}
+</style>
+</head>
+<body>
+    <div class="top">
+        <a href="#">회원가입</a> <a href="login.html">로그인</a> &nbsp;&nbsp;<input type="text" name="search" placeholder="Search.."> <button>검색</button>
+    </div>
+	<div class="header">
+		<img src="logo.png" class="logo-img">
+	</div>
+	<div class="navigation">
+		<a href="#">베스트</a>
+		<a href="#">세일중</a>
+		<a href="#">기획전</a>
+        <a href="#">이벤트</a>
+		<a href="#">스토어</a>
+	</div>
+	<div class="row">
+		<div class="column">
+			<h2>건조기</h2>
+            <img src="product-1.jpg" class="product-img">
+			<ul>
+                <li>트롬의류건조기</li>
+                <li>히트펌프식</li>
+                <li>16kg</li>
+                <li>모던스테인레스</li>
+                <li>1,669,000원</li>
+            </ul>
+            <div class="btn-center">
+                <input type="button" value="바로구매" onclick="location.href='order.html'" />
+                <input type="button" value="장바구니" />
+            </div>
+		</div>
+        <div class="column">
+			<h2>일반세탁기</h2>
+            <img src="product-2.jpg" class="product-img">
+            <ul>
+                <li>통돌이</li>
+                <li>DD모터</li>
+                <li>16kg</li>
+                <li>미드프리실버</li>
+                <li>574,500원</li>
+            </ul>
+            <div class="btn-center">
+                <input type="button" value="바로구매" onclick="location.href='order.html'" />
+                <input type="button" value="장바구니" />
+            </div>
+		</div>
+        <div class="column">
+			<h2>의류관리기</h2>
+            <img src="product-3.jpg" class="product-img">
+			<ul>
+                <li>트롬스타일러</li>
+                <li>히트펌프식</li>
+                <li>상의5벌,하의1벌</li>
+                <li>린넨블랙</li>
+                <li>1,504,000원</li>
+            </ul>
+            <div class="btn-center">
+                <input type="button" value="바로구매" onclick="location.href='order.html'" />
+                <input type="button" value="장바구니" />
+            </div>
+		</div>
+        <div class="column">
+			<h2>드럼세탁기</h2>
+            <img src="product-4.jpg" class="product-img">
+			<ul>
+                <li>트윈워시</li>
+                <li>DD모터</li>
+                <li>21kg+4kg</li>
+                <li>모던스테인레스</li>
+                <li>1,546,000원</li>
+            </ul>
+            <div class="btn-center">
+                <input type="button" value="바로구매" onclick="location.href='order.html'" />
+                <input type="button" value="장바구니" />
+            </div>
+		</div>
+	</div>
+	<div class="footer">
+		| <a href="#">회사소개</a> | <a href="#">이용약관</a> | <a href="#">전자금융거래약관</a> | <a href="#">개인정보처리방침</a> | <a href="#">고객센터</a> |
+	</div>
+</body>
+</html>
