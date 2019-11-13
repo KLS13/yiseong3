@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form method="post">
+	
+		<label for="power">안녕</label>
+		<input type="text" id="power">
+		<!-- 1. 텍스트 상자 -->
+		일반 텍스트 상자 : 	<input type = "text" /> <br />
+		비밀번호 텍스트 상자 :  <input type = "password" /> <br />
+		숫자 텍스트 상자 : 	<input type = "number" /> <br />
+		이메일 텍스트 상자 :   <input type = "email" /> <br />
+		URL 텍스트 상자 : <input type = "url" /> <br />
+		전화번호 텍스트 상자 : <input type = "tel" /> <br />
+		날짜 텍스트 상자 : <input type = "date" /> <br />
+		시간 텍스트 상자 : <input type = "time" /> <br />
+		<hr />
+		<!-- 2. 버튼 -->
+		일반버튼 : <input type="button" value="전송" />
+		일반버튼 : <button>전송2</button> <br />
+		전송버튼 : <input type="submit" value = "전송"/>
+		<!-- submit 버튼은 폼에 입력 모든 데이터를 action 속성으로 보낸다. -->			 
+		취소버튼 : <input type="reset" value="취소" /> <br />
+		이미지 버튼 : <input type="image" src="./images/google.png" width=100 />
+		숨김버튼 : <input type = "hidden" name="age" value="20" /> <!-- 값을 보내고 싶을때 사용. -->
+		<!-- 변수라고 생각하자 !   age 변수에 20 을 저장 !    -->	
+		<br />
+		<hr />	
+		
+		<!-- 라디오 버튼 -->
+		<!-- 여러 선택 중 하나만 선택하는 경우에 사용  ○남  ○여 -->
+		<!-- 라디오 버튼은 name 속성을 같은 값으로 설정-->
+		라디오 버튼 : <input type="radio" name="gender" value="남" /> 남
+				  <input type="radio" name="gender" value="여" /> 남
+		<br />
+		<hr />
+		
+		<!-- 4. 체크 박스 -->
+		<!-- 여러 선택들 중에서 자유롭게 선택하는 경우에 사용 □영화 □독서 □운동 □게임  여러개 선택가능한 -->
+		체크 박스 : <input type= "checkbox" name="hobbies" value="영화"/>영화
+		<input type= "checkbox" name="hobbies" value="게임"/>게임
+		<input type= "checkbox" name="hobbies" value="독서"/>독서
+		<br />
+		<hr />
+		<!-- 5. 필드셋 -->
+		<fieldset>
+			<legend>지역</legend>
+			<input type="checkbox" name = "region" value = "강남"/>강남 <br />
+			<input type="checkbox" name = "region" value = "강동"/>강동 <br />
+			<input type="checkbox" name = "region" value = "강북"/>강북 <br />
+			<input type="checkbox" name = "region" value = "강서"/>강서 <br />
+		</fieldset>
+		<!-- 6. textarea -->
+		<!-- 많은 양의 텍스트를 처리할 때 사용하는 태그 -->
+		<!-- 속성 - 행 : rows, 열 : cols -->
+		<textarea rows="10" cols = "100" placeholder="자기 소개"></textarea>
+		<hr />
+		<!-- 7. 목록 상자 (선택만 가능) -->
+		<!-- <select>태그로 목록을 만들고, <option>태그로 값을 추가한다. -->
+		<br />
+		<hr />
+		
+		<select name="addr1">
+			<option value= "서울">서울</option>
+			<option value= "경기">경기</option>
+			<option value= "인천">인천</option>
+		</select>
+		
+		<br />
+		<hr />
+		
+		<select name="addr2" size = "3">
+			<option value="강남">강남</option>	
+			<option value="강동">강동</option>	
+			<option value="강북">강북</option>	
+			<option value="강서">강서</option>	
+		</select>
+		
+		<br />
+		<hr />
+		<!-- 8. 콤보 상자(목록 상자 + 직접입력) -->
+		<input type= "text"list="animals"/>
+		<datalist id="animals">
+			<option value= "개" > </option>
+			<option value= "고양이" > </option>
+			<option value= "앵무새" > </option>
+			<option value= "햄스터" > </option>
+			<option value= "달팽이" > </option>
+		</datalist>
+		<hr />
+		
+		<!-- 9. 기타 -->
+		
+		<!-- 진행바 : 전체 100 중에서 50 진행상태 -->
+		50% 진행 : <progress value="50" max="100"></progress> <br />
+		
+		<!-- 색상표 -->
+		색상표 : <input type="color" /> <br />
+		
+		<!-- 범위바 : 0 ~ 100 사이 10 단위로 표시 -->
+		범위 : <input type="range" min="0" max="100" step="10" />
+		
+		<!-- 파일 첨부 -->
+		첨부파일 : <input type = "file" />
+	</form>
+</body>
+</html>
