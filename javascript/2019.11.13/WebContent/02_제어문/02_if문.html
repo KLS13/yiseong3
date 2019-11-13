@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>if문</title>
+</head>
+<body>
+	<h1>성적 확인</h1>
+	<p>평균 : <span id="average"></span>점</p>
+	<p>학점 : <span id="grade"></span>학점</p>
+	
+	<script type="text/javascript">
+	
+		var kor = parseInt(prompt("국어 점수를 입력하세요", "0"));
+		var eng = parseInt(prompt("영어 점수를 입력하세요", "0"));
+		var mat = parseInt(prompt("수학 점수를 입력하세요", "0"));
+		var average = (kor + eng + mat) / 3;
+		if (average >= 90) { grade = "A"; }		/* 자바스크립트는 변수 선언을 생략할 수 있다. (var grade; 없이 grade 변수 사용!) */
+		else if (average >= 80) { grade = "B"; }
+		else if (average >= 70) { grade = "C"; }
+		else if (average >= 60) { grade = "D"; }
+		else { grade = "F"; }
+		
+		document.getElementById("average").innerHTML = average;
+		document.getElementById("grade").innerHTML = grade;
+		
+	</script>
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

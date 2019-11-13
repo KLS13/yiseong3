@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+/*
+ 
+	var num = Math.floor(Math.random()*20)+1;
+	var count=0;
+	
+	while(true) {
+		
+		var answer = parseInt(prompt("숫자를 입력하세요"));
+	
+		if(answer == num) {
+			count++;
+			alert("정답 ! ! " + count + "번 만에 정답을 맞췄습니다." + "확률은 " + (1/count)*100 + "%");
+			break;
+		}else if(answer >20 || answer <0) {
+			alert("오답");
+		}else {
+			count++;
+			alert("오답");
+		}
+	}
+	
+	 
+	 */
+	var target = Math.floor(Math.random() * 20) + 1;
+	var guess;
+	var guessCount = 0;
+	var correct = false;
+	
+	while ( !correct ) {
+		guess = parseInt(prompt("날 맞춰봐!(1 ~ 20)"));
+		if ( guess < 1 || guess > 20 ) {
+			alert("1 ~ 20 사이로 다시 입력해!");
+		} else {
+			guessCount++;
+			if ( guess == target ) {
+				alert("정답!");
+				correct = true;
+			} else {
+				alert("오답!");
+			}
+		}
+	}
+	
+	var guessRatio = (1 / guessCount) * 100;
+	document.write("<h1>" + guessCount + "번만에 정답을 맞췄습니다!</h1>");
+	document.write("<h1>적중률은 " + guessRatio + "% 입니다.</h1>");
+	*/
+</script>
+</head>
+<body>
+
+</body>
+</html>

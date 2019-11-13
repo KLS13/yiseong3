@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>if문</title>
+<script type="text/javascript">
+	// 현재 시간을 기준으로 11시까지는 "아침 먹자!", 15시까지는 "점심 먹자!"
+	// 20시까지는 "저녁 먹자!", 나머지는 "야식 먹자!" 경고창에 출력하시오.
+	var nowHour = new Date().getHours();
+	if ( nowHour <= 11 ) { alert("아침 먹자!"); }
+	else if ( nowHour <= 15 ) { alert("점심 먹자!"); }
+	else if ( nowHour <= 20 ) { alert("저녁 먹자!"); }
+	else { alert("야식 먹자!"); }
+	
+	var day = new Date().getDay();
+	// 오늘이 무슨 요일인지 경고창에 출력하시오.(예 : 오늘은 월요일입니다!)
+	if ( day == 1 ){
+		alert("월요일");
+	}else if( day == 2) {
+		alert("화요일")
+	}else if( day == 3) {
+		alert("수요일")
+	}else if( day == 4) {
+		alert("목요일")
+	}else if( day == 5) {
+		alert("금요일")
+	}else if( day == 6) {
+		alert("토요일")
+	}else{
+		alert("일요일");
+	}
+</script>
+</head>
+<body>
+
+</body>
+</html>

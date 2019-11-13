@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	
+	var num = 0;
+	var avg = 0;
+	
+	while(true) {
+		var i = prompt("5개의 양수를 입력하세요.");	
+		if(typeof(parseInt(i))=="NaN"){
+			alert("다시 입력 하세요");
+		
+		}else if(num==4) {
+			break;
+		}else {
+			avg += parseInt(i);
+			num++;
+		}	
+	}
+	avg /= avg/5.0
+	document.write(avg);
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

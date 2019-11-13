@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	// 순위를 입력 받아 다음에 나열된 선물을 브라우저 화면에 출력하시오
+	// 1등 : 노트북 스피커  2등 : 스피커 이어폰   3등 : 이어폰   나머지 : 꽝
+	var rank = parseInt(prompt("순위를 입력하세요", "1"));
+	var gifts = "";	
+	switch(rank) {
+	
+	case 1 :
+		gifts = "노트북스피커";
+			break;
+	case 2 :
+		gifts = "스피커 이어폰";
+		break;
+	case 3 :
+		gifts = "이어폰";
+		break;
+	default :
+		gifts = "꽝"
+	}
+	alert(gifts);
+</script>
+</head>
+<body>
+
+</body>
+</html>

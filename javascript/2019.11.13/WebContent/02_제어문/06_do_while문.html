@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+/* 적을 쓰려뜨려라
+	1. 적은 100의 에너지를 가지고 있다.
+	2. 한번 공격할때마다 랜덤 0~29 사이의 데미지를 준다.
+	3. 몇번만에 적을 쓰려뜨렸는지 횟수를 출력하시오.
+*/
+
+var hp = 100;
+var count = 0;
+
+do {
+		var attack = Math.floor(Math.random()*30);
+		document.write("데미지 " + attack + "을 입혔습니다.");
+		document.write("<br />")
+		hp -= attack;
+		count++;
+		hp = hp < 0 ? 0 : hp; 
+		document.write("적의 남은 에너지 " + hp);
+		document.write("<br /><hr />")
+	}while(hp>0);
+		document.write("총 공격 횟수 : " + count + "번")
+</script>
+</head>
+<body>
+
+</body>
+</html>

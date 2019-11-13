@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var now = new Date();  // 현재 날짜와 시간
+	document.write("<h1>" + now + "</h1>");
+	
+	var date1 = new Date(2019, 8, 16, 12, 30, 50);
+	document.write("<h1>" + date1 + "</h1>");
+	
+	var date2 = new Date(2019, 10,13);
+	document.write("<h1>" + date2 + "</h1>");
+	
+	var date3 = new Date(2019, 11); // "일"이 없으면  1일
+	document.write("<h1>" + date3 + "</h1>");
+	
+	var date4 = new Date(24*60*60*1000);  하루 = (24*60*60*1000)  // 기준은 1970년 1월 1일 로부터
+	document.write("<h1>" + date4 + "</h1>");
+	
+	var date5 = new Date("2019-11-15");
+	document.write("<h1>" + date5 + "</h1>");
+	
+	/*
+		getter : 날짜에서 필요한 정보 추출
+		
+		1. getFullYear()		년도(yyyy)
+		2. getMonth()			월(0 ~ 11)
+		3. getDate()			일(1 ~ 31)
+		4. getDay()				요일번호(0: 일, 1: 월, ... , 6: 토)
+		5. getHours()			시(0 ~ 23)
+		6. getMinutes()			분(0 ~ 59)
+		7. getSeconds()			초(0 ~ 59)
+		8. getMilliseconds()	밀리초(0 ~ 999)
+		9. getTime()			1970년 1월 1일 기준 몇 밀리초가 지났는지 추출
+		
+		
+		setter : 날짜나 시간을 원하는 정보로 변경
+		
+		1. setFullYear(년도)			년도(yyyy)
+		2. setMonth(월)				월(0 ~ 11 을 전달해야 함)
+		3. setDate(일)				일(1 ~ 31)
+		4. setHours(시)				시(0 ~ 23)
+		5. setMinutes(분)			분(0 ~ 59)
+		6. setSeconds(초)			초(0 ~ 59)
+		7. setMilliseconds(밀리초)	밀리초(0 ~ 999)
+	 */
+	</script>
+</head>
+<body>
+
+</body>
+</html>
