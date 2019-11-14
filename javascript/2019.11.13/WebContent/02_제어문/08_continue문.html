@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var count = 0; 
+	var total = 0;
+	
+	while ( count < 5 ) {
+		var num = parseInt(prompt("양수만 입력하세요"));
+		
+		if( num <= 0 || isNaN(num)) {
+			alert("양수가 아니다. 다시 입력하시오");
+			continue;  // 반복문의 시작으로 되돌아감.
+		}
+		total += num;
+		count++;
+	}
+		var avg = total / 5;
+		alert(avg);
+</script>
+</head>
+<body>
+
+</body>
+</html>
