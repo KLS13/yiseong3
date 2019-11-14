@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	function plusTen() {
+		var a = 100;  // plusTen() 함수내에서만 사용할 수 있는 스코프
+		a += 10;
+		document.write("<h1>" + a + "</h1>");
+	}
+	plusTen();
+	document.write("<h1>" + a + "</h1>");  // 이 부분이 출력되지 않는 것임 !
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	// 1. 선언적 함수 정의
+	function callback() {
+		document.write("<h3>callback 함수 호출 ! </h3>");
+	}
+	
+	// 2. 다른 선언적 함수 정의
+	function callTenTimes( func ) {
+		
+		//매개변수 : func 는 함수를 저장할 변수임.
+		for(var n=0; n<10; n++) {
+			func();
+	}
+}
+
+	// 3. 다른 선언적  함수 호출
+	callTenTimes( callback ); // 선언적 함수를 전달한다.  함수 이름만 전달
+</script>
+</head>
+<body>
+</body>
+</html>

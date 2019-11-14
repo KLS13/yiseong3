@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>익명 함수</title>
+<script type="text/javascript">
+/* 
+	익명 함수
+	1. 이름이 없는 함수!
+	2. 익명 함수는 "변수"에 저장한 뒤에 호출
+*/
+	var view1 = function() {
+	document.write("<h1>첫 번째 익명 함수</h1>");
+	}
+	// 2. 변수를 통해 익명 함수 호출
+	view1();
+	
+	// 아래 부분이 실행되지 않는 이유는 자바스크립트 영역은 두번 읽히는데
+	// 첫번째로는 선언적 함수 부분이 읽히고 두번째는 나머지 부분이 읽힌다.
+	view2();
+	var view2 = function() {
+		document.write("<h1>첫 번째 익명 함수</h1>");
+	}
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

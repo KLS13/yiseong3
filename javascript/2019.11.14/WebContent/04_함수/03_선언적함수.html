@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>선언적 함수</title>
+<script type="text/javascript">
+	
+	/*
+		선언적 함수
+		
+		5. 정의된 선언적 함수를 나중에 따로 "변수"에 저장할 수 있다!!!
+	*/
+	view();    // 이건 컴파일이 안됨.   맨위에 호출된 view()가 뭔지 모름 !!!!!!!!!!!!!!!!!!
+	// 1. 선언적 함수 정의!(만들기!)
+	function ourFunction() {
+		document.write("<h1>ourFunction이 실행된다.</h1>");
+	}
+	
+	// 2. 정의된 함수를 변수에 저장하기!
+	var view = ourFunction;		// ourFunction 뒤에 () 가 없어야 함!
+	
+	// 3. 변수에 저장된 선언적 함수 호출하기!
+	view();		// ourFunction();
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

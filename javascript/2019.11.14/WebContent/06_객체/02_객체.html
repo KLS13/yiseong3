@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	//1. 객체 생성
+	var car= {
+			model : "e-class",
+			price : 65000,
+			company : {
+				name : "벤츠",
+				logo : "triangle"
+			},
+			tires : ["frontLeft", "frontRight", "backLeft", "backRight"],
+			drive : function() {
+				document.write("let's go!");
+			}
+	};
+	
+	document.write("<h1>" + car.model + "</h1>");
+	
+	document.write("<h1>" + car["price"] + "</h1>");
+	
+	document.write("<h1>" + car.company.name + "</h1>");
+	document.write("<h1>" + car.company.logo + "</h1>");
+	
+	document.write(car.tires + "<br />");
+	
+	for ( var i = 0, len = car.tires.length; i < len; i++ ) {
+		document.write(car.tires[i] + "<br />");
+	}
+	car.drive();
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var a = 100; // 전역변수
+	
+	// 1. 함수 정의와 호출이 동시에 진행되는 "자기호출함수"
+	(function(){
+		var a = 99; //지역 변수
+		document.write("내부(지역변수의 값) : " + a);		
+	})();
+	document.write("전역변수의 값 : " + a);
+</script>
+</head>
+<body>
+
+</body>
+</html>

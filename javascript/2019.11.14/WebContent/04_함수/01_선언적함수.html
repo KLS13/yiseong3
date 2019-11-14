@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>선언적 함수</title>
+<script type="text/javascript">
+	/* 
+	1. 이름이 있는 함수!
+	2. 함수를 정의하고(만들고), 호출하는(사용하는) 과정 필요
+	3. 정의와 호출 순서는 상관없다. 
+		("선언적 함수 정의" 부분은 언제나 먼저 처리된다.)
+		4. 정의된 선언적 함수를 "변수"에 저장할 수 있다.
+	*/
+	
+	// 1. 선언적 함수 정의 (만들자 !)
+	function myFunction() {
+		document.write("<h3>myFunction이 실행된다</h3>");
+	}
+	// 2. 선언적 함수 호출( 사용하자 ! )
+	myFunction();
+	
+	// 3. 변수에 선언적 함수 저장하기
+	
+	// 4. 변수에 저장된 선언적 함수 호출하기
+	var view = myFunction;
+	view();
+	
+	// 5. 선언적 함수 정의 + 변수 저장 한번에 하기
+	var view2 = function urFunction() {
+		document.write("<h3>urFunction이 실행된다</h3>");
+	}
+	// 6. 변수를 통한 함수 호출하기
+	view2();
+</script>
+</head>
+<body>
+
+</body>
+</html>

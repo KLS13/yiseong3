@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	var arr = {name : 'java', age : 25, major : 'programming'};
+	
+	document.write(arr.name);
+	document.write(arr.age);
+	
+	document.write()
+	function callback() {
+		document.write("출력 ! ! !");
+	}
+	
+	function print(func) {
+		func();
+	};
+	
+	print(callback);
+
+	var car= {
+			model : "e-class",
+			price : 65000,
+			company : {
+				name : "벤츠",
+				logo : "triangle"
+			},
+			tires : ["frontLeft", "frontRight", "backLeft", "backRight"],
+			drive : function() {
+				document.write("let's go!");
+			}
+	};
+</script>
+</head>
+<body>
+</body>
+</html>

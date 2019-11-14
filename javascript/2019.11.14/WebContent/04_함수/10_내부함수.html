@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	/* 
+	내부 함수
+	1. function 내부에 포함된 function을 의미!
+	2. function 외부에서는 호출할 수 없다.
+	*/
+	// 원 넓이를 반환하는 circle() 함수
+	function circleArea(r) {
+		//내부 함수 square()
+		function square(r) {
+			return Math.pow(r,2);
+		}
+		return Math.PI*square(r);//내부함수 호출		
+	}
+	var area = circleArea(4);
+	document.write(area);
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	function area() {
+		var num = prompt("값 입력하세요");
+		function cal() {
+			return Math.floor(num/3.3);
+		}
+		return cal();
+	}
+	
+	var pyeong = area();
+	document.write(pyeong + "평");
+	
+	/*
+	function show(squareMeter) {
+		function squareToPyeong(s) {
+			return s/3.3;
+		}
+		var area = squareToPyeong(squareMeter);
+		document.write("<h1>" + squareMeter + "제곱미터는 " + area + "평입니다");
+	}
+	
+	show(Number(prompt("변환할 제곱미터 값을 입력하세요.")));
+	*/
+</script>
+</head>
+<body>
+
+</body>
+</html>
