@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function manageID() {
+		var id = "admin";
+		
+		return {
+			getID : function() { return id;},
+			setID : function(id2){ id = id2; }
+			
+		}; 		   // 객체 리턴
+	}	     	   // - 객체를 리턴하는 이유 -
+ 	               // 여러 개의 함수를 리턴할때 객체에 남아서 리턴 !		
+		var manager = manageID();
+		document.write("<h1>" + manager.getID() + "</h1>");
+		manager.setID("user");
+		document.write("<h1>" + manager.getID() + "</h1>");
+		
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

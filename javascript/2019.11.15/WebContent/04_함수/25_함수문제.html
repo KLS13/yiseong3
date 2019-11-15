@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	//원하는 자리수로 반올림하기
+	// point(3.1415, 2) = 3.14
+	// point(3.1415, 1) = 3.1
+	function point(value, n) {
+		return Math.round(value*Math.pow(10,n))/ Math.pow(10,n);;
+	}
+	document.write(point(123.456, 0) + "<br />");
+	document.write(point(123.456, 1) + "<br />");
+	document.write(point(123.456, 2) + "<br />");
+	// 원하는 자리수로 올림하기
+	// pointUp(3.1415, 2)	= 3.15
+	// pointUp(3.1415, 1) = 3.2
+	function pointUp(value, n) {
+		return Math.ceil(value * Math.pow(10,n)) / Math.pow(10,n);
+	}
+	document.write(pointUp(123.456, 0) + "<br />");
+	document.write(pointUp(123.456, 1) + "<br />");
+	document.write(pointUp(123.456, 2) + "<br />");
+	// 원하는 자리수로 내림하기
+	// pointDown(3.1415, 2)	= 3.14
+	// pointDown(3.1415, 1) = 3.1
+		function pointDown(value, n) {
+			return Math.floor(value * Math.pow(10,n)) / Math.pow(10,n);
+	}
+	document.write(pointDown(123.456, -1) + "<br />"); // 일원따리 버리고 10원단위로 ~  123원 --> 120원
+	document.write(pointDown(123.456, 0) + "<br />");
+	document.write(pointDown(123.456, 1) + "<br />");
+	document.write(pointDown(123.456, 2) + "<br />");
+</script>
+</head>
+<body>
+
+</body>
+</html>

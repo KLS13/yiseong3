@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	//현재 날짜와 시간을 2019-11-15 오후 3:24
+	// 선언
+	//function to12Times(date) {
+		/*
+		1. getFullYear()		년도(yyyy)
+		2. getMonth()			월(0 ~ 11)
+		3. getDate()			일(1 ~ 31)
+		4. getDay()				요일번호(0: 일, 1: 월, ... , 6: 토)
+		5. getHours()			시(0 ~ 23)
+		6. getMinutes()			분(0 ~ 59)
+		*/
+		/*
+		var hours = date.getHours();
+		var ampm = "오전";
+		if(hours>= 12) {
+			ampm= "오후";
+			hours -=12;
+		}
+		
+		document.write(date.getFullYear()+ "-" + (date.getMonth()+1) +"-" +
+				date.getDate() + "&nbsp;" + ampm + "&nbsp;" + hours + ":" + date.getMinutes());
+	}
+	*/
+	
+	// 1. 선언적 함수 정의
+	function to12Times( date ) {
+		var y = date.getFullYear();
+		var mo = date.getMonth() + 1;
+		var d = date.getDate();
+		var h = date.getHours();
+		var mi = date.getMinutes();
+		var ampm = (h < 12) ? "오전" : "오후";
+		var result = y + "-" + mo + "-" + d + " " + ampm + " " + (h > 12 ? h - 12 : h) + ":" + mi;
+		return result;
+	}
+	
+	// 2. 선언적 함수 호출
+document.write(to12Times( new Date() )) ;
+
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

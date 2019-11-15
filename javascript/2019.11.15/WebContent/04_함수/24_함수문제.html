@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>함수문제-1</title>
+<script type="text/javascript">
+
+	//1. 선언적 함수 정의
+	function makeZeroNum( num , n) { //num을 n자리로 맞춤!
+		
+		var stringNum = "" + num;	// String(num);
+		
+		while(true) {			
+			if ( stringNum.length == n ) {
+				break;
+			}
+			stringNum = "0" + stringNum;
+		}
+		return stringNum;
+
+	}
+		
+	for ( var n = 1; n <= 100; n++ ) {
+		document.write("<h3>" + makeZeroNum(n,10) + "</h3>");
+	}
+	
+
+	
+	/* 1 이상 100미만  사이의 정수를 2자리로 맞춰서 사용하기
+	var num = 1;
+	var count = setInterval( function(){
+		if ( num >= 99 ) {
+			clearInterval(count);
+		}
+			if( num<=9 ) {
+				document.write("0" + (num++));
+				}else {
+					document.write(num++);
+				}		
+			document.write("<br />");
+	}, 1000);	
+*/
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>타이머 내장함수</title>
+<script type="text/javascript">
+
+	/*
+		타이머 함수
+		
+		1. 특정한 시간에 특정한 함수를 실행시켜주는 함수
+		2. 전달인자 : 함수, 시간(밀리초)
+		3. 종류
+			1) id = setTimeout(함수, 시간)	: 지정된 시간 후 함수를 1번 실행
+			2) clearTimeout(id)				: 해당 id를 가진 setTimeout 중지
+			3) id2 = setInterval(함수, 시간)	: 지정된 시간마다 함수를 반복해서 실행
+			4) clearInterval(id2)				: 해당 id2를 가진 setInterval 중지
+		4. setInterval 함수의 경우는 지정된 시간마다 함수를 스택에 쌓아두는 방식을 사용하는데
+		   스택에 많이 쌓이면 원래 실행하기로 한 만큼 실행되지 않을 수도 있다. (사용을 자제하라!)
+		5. setInterval 함수를 사용하는 대신!
+		   setTimeout 함수를 재귀 호출하라!
+	*/
+
+	
+	// 5초 후에 "안녕하세요" 경고창 출력하기
+	
+	var id = setTimeout( function(){ 
+		alert("안녕하세요!"); 
+	} , 5000 );
+	
+	clearTimeout(id);
+	
+	
+	
+	// 1초 마다 숫자를 1씩 증가시켜서 출력하기
+	// 10초만 진행하고 종료시키기
+	var n = 0;
+	var id2 = setInterval( function(){
+		if ( n >= 9 ) {
+			clearInterval(id2);
+		}
+		document.write(++n);
+	}, 1000);
+	
+	clearInterval(id2);
+	
+		
+	
+	
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

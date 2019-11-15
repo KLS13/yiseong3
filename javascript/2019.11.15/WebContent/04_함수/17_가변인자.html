@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	// prompt 이용,  앞으로 몇개를 입력받을 것인지?
+	// 입력한만큼 새로운 점수를 입력해 배열에 저장
+	
+	var num = parseInt(prompt("몇번입력?"));
+	var arr = [];
+	
+	for( var n = 0; n< num; n++) {
+		var score = parseInt(prompt((n+1) + "번 째 점수를 입력하세요"));
+		arr.push(score);
+	}
+	document.write("<h1>" + scoreHandler(arr) + "</h1>");
+	
+	//외부함수
+	function scoreHandler( arr ) {
+		if(arr.length == 0) {
+			return getAverage();
+		}else if( arr.length == 1) {
+			return getAverage(arr[0]);
+		}else {
+			return getAverage(arr, arr.length);
+		}
+		//내부함수
+		function getAverage() {
+			if(arguments.length == 0 ) {
+				return 0;
+			}else if( arguments.length == 1) {
+				return arguments[0];
+			}else {
+				var total = 0;
+				for ( var i = 0 ; i<arguments[1]; i++) {
+					total += arguments[0][i];
+				}
+				return total/arguments[0].length; // arguments[1]
+			}
+		}
+	}
+	
+</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+/*
+ 
+	function plusOne() {
+		var n = 0;
+		n++;
+		return n; //리턴 후 소멸되는 지역변수 ( 변수를 리턴하면 값이 유지되지 않음 )
+	}
+	document.write("<h1>" + plusOne() + "</h1>");
+	document.write("<h1>" + plusOne() + "</h1>");
+	document.write("<h1>" + plusOne() + "</h1>");
+	document.write("<h1>" + plusOne() + "</h1>");
+	document.write("<h1>" + plusOne() + "</h1>");
+	document.write("<h1>" + plusOne() + "</h1>");
+	*/
+	
+	var plusOne = function() { // 변수를 함수에 담아서 함수로 리턴하면 값이 유지된다.
+		var n = 0;
+		return function() {
+			n++;
+			return n;
+		};
+	}();
+	document.write("<h1>" + plusOne() + "</h1>");
+	document.write("<h1>" + plusOne() + "</h1>");
+	document.write("<h1>" + plusOne() + "</h1>");
+</script>
+</head>
+<body>
+</body>
+</html>

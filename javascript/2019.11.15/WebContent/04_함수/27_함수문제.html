@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>함수문제-4</title>
+</head>
+<body>
+	<h1 id="clock"></h1>
+	<script type="text/javascript">
+
+		function makeZeroNum(num, n) { 	// num을 n자리로 맞춤!
+			var stringNum = "" + num; 	// String(num);
+			while (stringNum.length < n) {
+				stringNum = "0" + stringNum;
+			}
+			return stringNum;
+		}
+		
+		function watch() {
+			var date = new Date();
+			var y = date.getFullYear();
+			var mo = date.getMonth() + 1;
+			var d = date.getDate();
+			var h = date.getHours();
+			var mi = date.getMinutes();
+			var s = date.getSeconds();
+			var result = y + "-" 
+						+ makeZeroNum(mo, 2) + "-"
+						+ makeZeroNum(d, 2) + " "
+						+ h + ":"
+						+ makeZeroNum(mi, 2) + ":"
+						+ makeZeroNum(s, 2);
+			document.getElementById("clock").innerHTML = result;
+			setTimeout( watch, 1000 );
+		}
+
+		watch();
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+

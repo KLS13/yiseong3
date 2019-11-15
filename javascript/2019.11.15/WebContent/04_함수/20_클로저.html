@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>증가/감소 카운터 구현하기</h1>
+	<h3>현재 카운트 값은 <span id="counter-value"></span></h3>
+	<br />
+	<input type = "button" value="증가" onclick="plusOne()" />
+	<input type = "button" value="감소" onclick="minusOne()" />
+	
+	<script>
+	
+		// 각각의 증가/감소 버튼이 이어져있지 않음.
+	
+		var increment = function() {
+			var counter = 0;
+			return function() { return ++counter; };
+		}();
+	
+		function plusOne() {
+		document.getElementById("counter-value").innerHTML = increment();	
+		}
+		
+		var decrement = function() {
+			var counter = 0;
+			return function() { return --counter; };
+		}();
+	
+		function minusOne() {
+		document.getElementById("counter-value").innerHTML = decrement();	
+		}
+		
+		</script>
+</body>
+</html>

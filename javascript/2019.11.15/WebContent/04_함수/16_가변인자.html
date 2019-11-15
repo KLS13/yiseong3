@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	// 1. 선언적 함수 선언
+	function myFunction() {
+		document.write("arguments 타입 : " + typeof(arguments) + "<br />");
+		document.write("arguments 길이 : " + arguments.length + "<br />");
+	}
+	/* 
+		가변인자
+		
+		1. 함수를 호출할 때 함수에게 전달하는 값이 "인자"이다.
+			(인수, argument, parameter)
+		2. 자바스크립트의 모든 함수 스코프에는 arguments 라는 특별한 객체가 있다.
+		3. 가변인자들은 arguments 객체에 저장된다.
+		4. arguments 객체는 사용방법이 배열과 매우 흡사하다.
+	*/
+	
+	// 2. 선언적 함수 호출
+	myFunction();
+	myFunction(1);
+	myFunction(1,2);
+</script>
+</head>
+<body>
+
+</body>
+</html>

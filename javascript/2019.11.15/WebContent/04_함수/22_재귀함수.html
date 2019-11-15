@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	
+	// 1. 선언적 함수의 재귀 호출 (자신이 자신을 부름)
+	sayHello(5);
+
+	function sayHello( n ) {
+		if(n >= 1) {
+			document.write("<h1>Hello</h1>");
+			sayHello(n - 1)
+		}
+	}
+	
+	// 2. 익명 함수의 재귀호출
+	var sayGoodbye = function(n) {
+		if(n >=1) {
+			document.write("<h3>Goodbye</h3>");
+			//sayGoodbye(n-1);
+			arguments.callee(n-1); // callee : 누구에 의해서 호출되었는지 그 대상
+		}
+	}
+	sayGoodbye(5);
+	
+	// 3. 1초마다 숫자를 1씩 증가시켜서 출력하기
+	// 10초만 진행하고 종료시키기
+	// setTimeout 함수
+	
+	var n = 0;
+	function myTimer() {
+		setTimeout(function(){
+			if(n>9){
+				return;
+			}
+			document.write("<h3>" + (++n) + "</h3>");
+			myTimer();
+		},1000);
+	}
+	
+	myTimer();
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>
