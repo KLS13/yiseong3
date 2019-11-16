@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>회원가입</title>
+<style type="text/css">
+	.wrap {
+		width: 600px;
+		margin: auto;
+	}
+	.wrap > h1 {
+		color: limegreen;
+	}
+	.centered {
+		text-align: center;
+	}
+	table {
+		width: 100%;
+	}
+	table, th {
+		border-collapse: collapse;
+		border-color: gray;
+		border-style: solid;
+		border-width: 2px 0;
+	}
+	th {
+		background-color: lightgray;
+	}
+	td, th {
+		padding: 10px;
+	}
+</style>
+</head>
+<body>
+	<div class="wrap">
+		<h1 class="centered">회원가입 폼</h1>
+		<form action="#" method="post" enctype="multipart/form-data">
+			<table>
+				<tr>
+					<th colspan="2">필수정보</th>
+				</tr>
+				<tr>
+					<td><label for="userId">아이디</label></td>
+					<td><input type="text" id="userId" size="40" maxlength="30" autofocus /></td>
+				</tr>
+				<tr>
+					<td><label for="userPw">비밀번호</label></td>
+					<td><input type="password" id="userPw" size="40" maxlength="30" /></td>
+				</tr>
+				<tr>
+					<td><label for="userPw2">비밀번호확인</label></td>
+					<td><input type="password" id="userPw2" size="40" maxlength="30" /></td>
+				</tr>
+				<tr>
+					<td><label for="userName">이름</label></td>
+					<td><input type="text" id="userName" size="40" maxlength="30" /></td>
+				</tr>
+				<tr>
+					<td>성별</td>
+					<td>
+						<input type="radio" id="man" name="gender" value="남" checked /><label for="man">남자</label>&nbsp;
+						<input type="radio" id="woman" name="gender" value="여" /><label for="woman">여자</label>
+					</td>
+				</tr>
+				<tr>
+					<td><label for="userContact">연락처</label></td>
+					<td>
+						<select id="userContact" name="mPhone1">
+							<option value="010" selected>010</option>
+							<option value="011">011</option>
+							<option value="016">016</option>
+							<option value="018">018</option>
+							<option value="019">019</option>
+						</select>
+						-<input type="number" name="mPhone2" maxlength="4" />
+						-<input type="number" name="mPhone3" maxlength="4" />
+					</td>
+				</tr>
+				<tr>
+					<th colspan="2">선택정보</th>
+				</tr>
+				<tr>
+					<td><label for="nickName">닉네임</label></td>
+					<td><input type="text" id="nickName" size="40" maxlength="30" /></td>
+				</tr>
+				<tr>
+					<td><label for="email1">이메일</label></td>
+					<td>
+						<input type="text" id="email1" size="20" maxlength="20" />
+						@
+						<input type="text" id="email2" list="domain" placeholder="도메인입력/선택" />
+						<datalist id="domain">
+							<option value="naver.com">
+							<option value="gmail.com">
+							<option value="daum.net">
+							<option value="nate.com">
+						</datalist>
+					</td>
+				</tr>
+				<tr>
+					<td>이메일수신</td>
+					<td>
+						<input type="radio" id="yesEmail" checked /><label for="yesEmail">수신</label>&nbsp;
+						<input type="radio" id="noEmail" /><label for="noEmail">미수신</label>
+					</td>
+				</tr>
+				<tr>
+					<td>SMS수신</td>
+					<td>
+						<input type="radio" id="yesSMS" checked /><label for="yesSMS">수신</label>&nbsp;
+						<input type="radio" id="noSMS" /><label for="noSMS">미수신</label>
+					</td>
+				</tr>
+				<tr>
+					<td>취미 활동</td>
+					<td>
+						<input type="checkbox" name="hobbies" id="reading" checked /><label for="reading">독서</label>
+						<input type="checkbox" name="hobbies" id="fishing" /><label for="fishing">낚시</label>
+						<input type="checkbox" name="hobbies" id="swim" /><label for="swim">수영</label>
+					</td>
+				</tr>
+				<tr>
+					<td><label for="profile">프로필사진</label></td>
+					<td><input type="file" id="profile" /></td>
+				</tr>
+			</table>
+			<div class="centered">
+				<input type="submit" value="회원가입" />
+				<input type="reset" value="다시작성" />
+			</div>
+		</form>
+	</div>
+</body>
+</html>
