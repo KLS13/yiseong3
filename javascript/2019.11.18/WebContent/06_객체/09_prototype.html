@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function Car(model) {
+		this.model = model;
+		this.__proto__.handle = 1;
+		this.__proto__.tires = 4;
+	} //생성자 안에 내부에서 prototype 사용하기
+	
+	//외부에서 prototype 사용하기
+	/*
+	Car.prototype.handle = 1;
+	Car.prototype.tires = 4;
+	Car.prototype.drive = function(){};
+	*/
+	
+	
+	//생성자 함수를 이용해 객체 생성
+	var myCar = new Car("e-class");
+	
+	for(var p in myCar) {
+		document.write("<h3>" + myCar[p] + "</h3>");
+	}
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

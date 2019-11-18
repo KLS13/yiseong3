@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	//book 객체 생성
+	var book = {
+			title : "자바스크립트 정석",
+			price : 30000,
+			stock : 10
+	};
+	
+	// price 를 35000 으로 수정하시오.
+	book.price += 5000;
+	
+	//salePrice를 price의 90%로 새로 추가하시오.
+	book.salePrice = book.price * 0.9;
+	
+	delete book.stock; 
+	
+	document.write("책의 제목 : " + book.title + "<br />");
+	document.write("책의 원가 : " + book.price +"원" + "<br />");
+	document.write("책 판매가 : " + book.salePrice +"원" + "<br />");
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

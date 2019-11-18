@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<body>
+<h1>2020년 4월 15일 총선 </h1>
+<h1 id="d-day"></h1>
+<script type="text/javascript">
+	
+	countdown();
+	// 1. 선언적 함수 정의
+	function countdown( deadline ) {
+		//deadline = new Date(2020, 3, 15);   // 2020-04-15  (month + 1)
+		deadline = new Date(2019,10,18,10,25,40);   //
+		var now = new Date();
+	
+		var restTime = deadline.getTime() - now.getTime();	// getTime() : 밀리초 단위로 시간을 구해준다!
+	
+		// 밀리초 restTime -> 일, 시, 분, 초
+	
+		restTime = Math.floor(restTime / 1000);		// 밀리초 -> 초
+	
+		var second = restTime % 60;		// 초 완성!
+		var minute = Math.floor(restTime / 60) % 60;	// 분 완성!
+		// var hour = Math.floor(Math.floor(restTime / 60) / 60) % 24;	// 시 완성!
+		var hour = Math.floor(restTime / 60 / 60) % 24;
+		var day = Math.floor(restTime / 60 / 60 / 24);	// 일 완성!
+	
+		var result = "";
+	
+		if( day != 0 ) {
+			result += day + "일";	
+		}
+		result += hour +"시 " + minute +"분 " + second + "초 남음 ! ";
+	
+		document.getElementById("d-day").innerHTML = result;
+		if(second+minute+hour+day == 0) {
+			document.getElementById("d-day").innerHTML = "D데이입니다.";
+			clearInterval(d-day);
+			
+		}else{
+		setTimeout(countdown, 1000);
+	
+		}
+		
+		/*
+		var id = setTimeout( countdown, 1000 );
+	 	if (day == 0 && hour == 0 && minute == 0 && second == 0) {
+			clearTimeout(id);
+			document.getElementById("d-day").innerHTML = "D데이입니다.";
+		}
+			
+			*/
+	}
+	
+</script>
+</body>
+</html>

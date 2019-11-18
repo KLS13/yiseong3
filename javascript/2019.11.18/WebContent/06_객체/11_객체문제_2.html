@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>객체문제-1</title>
+<script type="text/javascript">
+
+	// 빈 객체 car 생성
+	var car = {};
+	
+	// 동적으로 프로퍼티 추가
+	car.model = "e-class";
+	car.speed = 0;
+	car.oil = 50;
+	car.MAX_SPEED = 100;
+	
+	// speedUp 함수 : speed 10 증가에 oil 5 사용
+	car.speedUp = function() {
+		if (this.oil >= 5) {
+			this.oil -= 5;
+			this.speed += 10;
+			if (this.speed >= this.MAX_SPEED) {
+				this.speed = this.MAX_SPEED;
+			}
+		}
+	}
+	
+	// speedDown 함수 : speed 감소에 oil 미사용
+	car.speedDown = function() {
+		this.speed -= 10;
+		if (this.speed < 0 ) {
+			this.speed = 0;
+		}
+	}
+	
+	document.write("<h3>speed : " + car.speed + ", oil : " + car.oil);
+	car.speedUp();
+	document.write("<h3>speed : " + car.speed + ", oil : " + car.oil);
+	car.speedDown();
+	document.write("<h3>speed : " + car.speed + ", oil : " + car.oil);
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

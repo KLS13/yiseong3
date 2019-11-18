@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>객체문제-2</title>
+<script type="text/javascript">
+
+	// 객체를 만드는 function makeBook을 만드시오.	
+	function makeBook( _title, _price ) {
+		var book = {
+			title: _title,
+			price: _price
+		};
+		return book;
+	}
+
+	// book 저장할 배열 : bookList
+	var bookList = [];
+	
+	// bookList에 book 저장
+	bookList.push( makeBook( prompt("책 제목 입력"), parseInt(prompt("책 가격 입력"))) );
+	bookList.push( makeBook( prompt("책 제목 입력"), parseInt(prompt("책 가격 입력"))) );
+	bookList.push( makeBook( prompt("책 제목 입력"), parseInt(prompt("책 가격 입력"))) );
+	
+	// bookList에 저장된 book 정보 출력
+	for (var i = 0, len = bookList.length; i < len; i++) {
+		var message = "책제목 : " + bookList[i].title + ", 가격 : " + bookList[i].price + "원";
+		document.write("<h3>" + message + "</h3>" );
+	}
+	document.write("============================================================");
+	for (var i = 0, len = bookList.length; i < len; i++) {
+		with(bookList[i]) {
+			var message = "책제목 : " + bookList[i].title + ", 가격 : " + bookList[i].price + "원";
+			document.write("<h3>" + message + "</h3>" );
+		}
+	}
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

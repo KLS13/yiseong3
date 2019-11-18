@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	var person = {
+			name : "carry",
+			age : 20
+	};
+	//person 객체의 프로퍼티 순회
+	// for-in문 : 객체의 프로퍼티를 추출할 수 있음.
+	// for(var 프로퍼티 in 객체) {
+		
+	//}
+	
+	//person 순회
+	for(var p in person) {
+		document.write("<h3>" + person.p+ "</h3>"");  // .(마침표) 표기법
+													 // for-in문에서는  . 을 지원하지 않는다.
+													 //  [ 대괄호 ] 표기법만 지원함.
+	}
+	
+	for(var p in person) {
+		document.write(person[p]+"<br />");
+	}
+</script>
+</head>
+<body>
+
+</body>
+</html>

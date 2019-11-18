@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>프로토타입</title>
+<script type="text/javascript">
+	function Person(name, age) {
+		//객체마다 다른 값을 가짐
+		this.name = name;
+		this.age = age;
+		
+		//객체마다 같은 값을 가짐
+		//객체를 생성할 때마다 계속해서 같은 값이 생김.
+		//공간의 낭비가 발생 -> 이런 데이터는 prototype
+		/*
+		this.head = 1;
+		this.eyes = 2;
+		this.nose = 1;
+		this.arms = 2;
+	*/
+	}
+	
+	//프로토타입을 이용한 프로퍼티 접근
+	//객체들이 접근하는 하나의 공간: 프로토타입
+	Person.prototype.head = 1;
+	Person.prototype.eyes = 2;
+	Person.prototype.nose = 1;
+	Person.prototype.arms = 2;
+	// 생성자 함수를 통해 객체 생성
+	
+	var man = new Person("tom",20);
+	var woman = new Person("alice",21);
+	
+	for (var p in man) {
+		document.write("<h3>" + man[p] + "</h3>");
+	}
+	for (var p in man) {
+		document.write("<h3>" + woman[p] + "</h3>");
+	}
+</script>
+</head>
+<body>
+
+</body>
+</html>

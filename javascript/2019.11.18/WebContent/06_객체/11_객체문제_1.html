@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>객체문제-1</title>
+<script type="text/javascript">
+
+
+	
+	// speedUp 함수 : speed 10 증가에 oil 5사용
+	// speedDown 함수 : speed 감소에 oil 미사용
+
+</script>
+</head>
+<body>
+
+	현재 속도<span id="counter-value"></span>
+	<br />
+	<input type = "button" value="증가" onclick="plusOne()" />
+	<input type = "button" value="감소" onclick="minusOne()" />
+	
+	<script>
+		var car = {};
+	
+		car.model = "e-class";
+		car.speed = 0;
+		car.oil = 50;
+		// 각각의 증가/감소 버튼이 이어져있지 않음.
+		var increment = function() {
+			
+			return function() { return ++car.speed + SpeedUp(); };
+		}();
+	
+		function plusOne() {
+		document.getElementById("counter-value").innerHTML = increment();	
+		}
+		
+		var decrement = function() {
+			return function() { return --car.speed + SpeedUp(); };
+		}();
+	
+		function minusOne() {
+		document.getElementById("counter-value").innerHTML = decrement();	
+		}
+		
+		function SpeedUp() {
+			if(car.speed%10==0) {
+				car.oil -= 5;
+			}
+			return "현재 속도 : " + car.speed + "현재 기름 : "+ car.oil;
+		}
+		</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	//생성자 함수
+	function Student(name, kor, eng, mat){
+		this.name = name;
+		this.kor = kor;
+		this.eng = eng;
+		this.mat = mat;
+		// Student 객체마다 function(){} 을 가지는 것은 공간낭비 이므로 프로토타입으로 옮기자.
+		/*this.getAverage = function() {
+			return (this.kor + this.eng + this.mat)/3;
+		this.info = function(){
+			var message = "";
+			message += "학생이름 : " + this.name + "(평균 : " + this.getAverage() + "점)";
+			return message;
+		};
+		}*/
+	}
+	
+	//Student 함수를 통해 생성된 객체들이 공유하는 prototype
+	Student.prototype.getAverage = function() {
+		return(this.kor+this.eng+this.mat)/3;
+	};
+	Student.prototype.info = function(){
+		var message = "";
+		message += "학생이름 : " + this.name + "(평균 : " + this.getAverage() + "점)";
+		return message;
+	};
+	
+	////////////////////////////////////////////////////
+	var students = [];
+	students.push(new Student('java',85,85,85)); 
+	students.push(new Student('C',65,75,95));
+	
+	for(var i = 0; i<students.length; i++){
+		document.write("<h3>" + students[i].info() + "</h3>");
+	}
+
+</script>
+</head>
+<body>
+</body>
+</html>

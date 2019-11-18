@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>객체문제3</title>
+<script type="text/javascript">
+
+	// Triangle 생성자 함수를 정의
+	function Triangle(w,h) {
+		// w==0 , h==0 이면 생성금지!
+		if(w==0 || h==0) {
+			alert("너비나 높이가 0인 Triangle은 생성이 불가능합니다.");
+			return;
+		}
+		// w<0, h<0 이면 정상적으로 생성 !  (단, 음수기호만 제거)
+		this.width = Math.abs(w);
+		this.height = Math.abs(h);
+	} 
+	//Triangle 의 prototype 을 이용해서 관련 함수 저장하기
+	Triangle.prototype.getArea = function() { 
+		return (this.width * this.height) / 2 ;
+	}
+	
+	//객체 자체를 출력할 수 있게 해주는 약속된 toString
+	Triangle.prototype.toString = function() {
+		return "너비 : " + this.width + ", 높이 : " + this.height + ", 크기 : " + this.getArea();
+	}
+	
+	
+	
+	// 생성자 함수를 통해서 Triangle 객체 생성하기
+	var semo = new Triangle(-10, 5);
+	document.write("<h3>" + semo + "</h3>");
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

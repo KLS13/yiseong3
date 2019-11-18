@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+/* 
+	생성자 함수
+	1. 객체를 생성하는 함ㅅ
+	2. 첫 글자를 대문자로 만듬.
+
+	// 기존 book 객체 생성
+	var book = {};
+	
+	//생성자 함수를 통한 객체 생성1
+	function Book() {}
+	var book = new Book();
+	
+	//생성자 함수를 통한 객체 생성2
+	function Book(title) { this.title = title; }
+	var book = new Book("자바스크립트 정석");
+*/
+	
+	//1. 생성자 함수 정의
+	function Book( title, price ) {
+		this.title = title;  //this.객체 프로퍼티 = 매개변수;
+		this.price = price;
+	}
+	//2. 생성자 함수를 이용한 객체 생성
+	var book = new Book("자바스크립트 정석", 30000);
+	
+	//3. 객체 book의 정보 확인
+	for ( var p in book) {
+		document.write("<h3>" + book[p] + "</h3>");
+	}
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>
