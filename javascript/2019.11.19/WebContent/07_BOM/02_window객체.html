@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>window객체</title>
+<script type="text/javascript">
+	
+	// 1. 전역 객체 선언
+	var newWindow;
+	
+	// 2. 창 열기
+	function winOpen() {
+		var feature = "width=400, height=300, top=100, left=100";
+		// feature += "titlebar=no, toolbar=yes, menubar=yes, location=yes, scrollbars=yes, statue=yes, resizable=yes";
+		newWindow = window.open("./index.html", "", feature);
+	}
+	
+	// 3. 창 닫기
+	function winClose() {
+		newWindow.close();
+	}
+	
+</script>
+</head>
+<body>
+	<form action="#">
+		<input type="button" value="창 열기" onclick="winOpen()" />
+		<input type="button" value="창 닫기" onclick="winClose()" />
+	</form>
+</body>
+</html>

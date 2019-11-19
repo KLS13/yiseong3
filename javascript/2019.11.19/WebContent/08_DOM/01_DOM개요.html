@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOM</title>
+<script type="text/javascript">
+	/*
+		DOM : Document Object Model (문서 객체 모델)
+		
+		1. 웹 문서를 로드할 때 브라우저는 구성 요소들을 트리 구조의 DOM 생성
+		2. DOM을 통해서 HTML 구성 요소들을 획득, 추가, 변경, 삭제 등이 가능
+		3. 주요 선택 메소드
+			1) document.getElementById("아이디")
+			2) document.getElementsByTagName("태그")
+			3) document.getElementsByClassName("클래스속성")
+			4) document.querySelector("선택자")
+			5) document.querySelectorAll("선택자")
+		4. 주요	속성
+			1) innerHTML : 내부 글자 변경
+			2) style.css속성 : 스타일 변경
+			   style[css속성]
+			3) attribute : 속성 변경
+			   (1) document.getElementById("box").class = "wrap";
+			   (2) document.getElementById("a").href = "http://www.naver.com";
+			   - attribute 처리 getter/setter
+			      가. setAttribute(속성명, 값)
+			      나. getAttribute(속성명) : 속성의 값이 반환
+	*/
+	
+	// <body> 태그를 모두 읽은 후에 처리되는 onload
+	window.onload = function() {
+		
+		var message = document.getElementById("title");
+		
+		document.write("<hr />");
+		document.write(message.innerHTML);
+		document.write("<hr />");
+		
+	}
+	
+</script>
+</head>
+<body>
+	<h1 id="title">홈페이지에 오신 걸 환경합니다!</h1>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>window객체</title>
+<script type="text/javascript">
+	// 전역 객체 선언
+	var win;
+
+	// 1. 창 열기
+	function winOpen() {
+		// 화면 중앙에 창 열기
+		var width = 400;
+		var height = 300;
+		var top = (screen.availHeight - height) / 2;
+		var left = (screen.availWidth - width) / 2;
+		var feature = "width=" + width + ",height=" + height + ",top=" + top + ",left=" + left;
+		win = window.open("", "", feature);
+	}
+	// 2. 창 닫기
+	function winClose() {
+		win.close();
+	}
+	
+	// 창 이동하기
+	// 1) moveTo(x, y) : 스크린 기준으로 [x, y] 방향으로 이동
+	// 2) moveBy(x, y) : 현재 창의 위치를 기준으로 [x, y] 방향으로 이동
+	
+	// ----------> +  (x 방향)
+	// |
+	// |
+	// |
+	// |
+	// V
+	// +
+	// (y 방향)
+	
+	
+	// 3. 위로 이동
+	function moveUp() {
+		win.focus();
+		win.moveBy(0, -20);
+	}
+	// 4. 아래로 이동
+	function moveDown() {
+		win.focus();
+		win.moveBy(0, 20);
+	}
+	// 5. 왼쪽으로 이동
+	function moveLeft() {
+		win.focus();
+		win.moveBy(-20, 0);
+	}
+	// 5. 오른쪽으로 이동
+	function moveRight() {
+		win.focus();
+		win.moveBy(20, 0);
+	}
+
+</script>
+<style type="text/css">
+	input[type=button] { font-size: 1.5em; }
+</style>
+</head>
+<body>
+	<form action="#">
+		<input type="button" value="창 열기" onclick="winOpen()" />
+		<input type="button" value="창 닫기" onclick="winClose()" />
+		<input type="button" value="위로 이동" onclick="moveUp()" />
+		<input type="button" value="아래로 이동" onclick="moveDown()" />
+		<input type="button" value="왼쪽으로 이동" onclick="moveLeft()" />
+		<input type="button" value="오른쪽으로 이동" onclick="moveRight()" />
+	</form>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOM생성</title>
+<script type="text/javascript">
+
+	window.onload = function() {
+		
+		var fruits = ["apple", "banana", "orange", "kiwi", "mango"];
+		
+		for ( var i = 0, len = fruits.length; i < len; i++ ) {
+			
+			// 1. <li> 태그 만들기
+			var li = document.createElement("li");
+			
+			// 2. 배열에 저장된 과일명으로 텍스트 노드 만들기
+			var fruitName = document.createTextNode(fruits[i]);
+			
+			// 3. <li> 태그에 텍스트 노드 추가하기
+			li.appendChild(fruitName);
+			
+			// 4. <ul> 태그에 <li> 태그 추가하기
+			document.getElementById("list").appendChild(li);
+			
+		}
+		
+	}
+
+</script>
+</head>
+<body>
+	<ul id="list">
+	
+	</ul>
+</body>
+</html>

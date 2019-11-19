@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOM생성</title>
+<script type="text/javascript">
+
+	window.onload = function() {
+		
+		// 1. 이미 있는 요소에 속성 변경(추가 및 변경)
+		// document.getElementById("img1").src = "../images/firefox.png";
+		document.getElementById("img1").setAttribute("src", "../images/firefox.png");
+		
+		// 2. 새 요소를 만들어서 추가(img)
+		var image = document.createElement("img");
+		image.src = "../images/firefox.png";
+		image.alt = "파이어폭스 로그";
+		image.width = 200;
+		document.body.appendChild(image);
+		
+	}
+
+</script>
+</head>
+<body>
+	<img id="img1"></img>
+	<br />
+</body>
+</html>

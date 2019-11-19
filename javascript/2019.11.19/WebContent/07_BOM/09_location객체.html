@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>location객체</title>
+<script type="text/javascript">
+
+	document.write("<h1>");
+
+	document.write("location href = " + location.href + "<br />");
+	document.write("location hostname = " + location.hostname + "<br />");
+	document.write("location pathname = " + location.pathname + "<br />");
+	
+	document.write("</h1>");
+	
+	// 1. 히스토리 남기기 (2가지)
+	function winGo1() {
+		// location.href = "http://www.google.com";
+		location.assign("http://www.google.com");
+	}
+	// 2. 히스토리 안 남기기
+	function winGo2() {
+		location.replace("http://www.google.com");
+	}
+
+</script>
+</head>
+<body>
+	<form action="#">
+		<input type="button" value="히스토리 남기고 이동" onclick="winGo1()" />
+		<br />
+		<input type="button" value="히스토리 안 남기고 이동" onclick="winGo2()" />
+	</form>
+</body>
+</html>

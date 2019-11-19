@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>screen객체</title>
+<script type="text/javascript">
+
+	document.write("<h1>");
+	
+	document.write("화면 너비=" + screen.width + "<br />");		// 해상도
+	document.write("화면 높이=" + screen.height + "<br />");	// 해상도
+	
+	document.write("사용 가능한 너비=" + screen.availWidth + "<br />");		// 해상도 이하
+	document.write("사용 가능한 높이=" + screen.availHeight + "<br />");	// 해상도 이하
+	
+	document.write("</h1>");
+	
+	// 최대화 근접 크기로 열기
+	window.open("", "", "width=" + screen.availWidth + ", height=" + screen.availHeight);
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

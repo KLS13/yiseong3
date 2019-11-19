@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>window객체</title>
+<script type="text/javascript">
+	
+	// 전역 객체
+	var win;
+	
+	// 1. 창 열기
+	function winOpen() {
+		win = window.open("", "", "width=400, height=300");
+	}
+	// 2. 창 선택
+	function winFocus() {
+		win.focus();
+	}
+	// 3. 창 닫기
+	function winClose() {
+		if ( win ) {		
+			win.close();
+		}
+	}
+	// 4. 창 체크
+	function winCheck() {
+		if ( !win ) {
+			alert("새 창이 열린 적이 없습니다!");
+		} else {
+			if ( win.closed ) {
+				alert("새 창이 닫혔습니다!");
+			} else {
+				alert("새 창이 열려 있습니다!");
+			}
+		}
+	}
+	
+</script>
+<style type="text/css">
+	input[type=button] { font-size: 1.5em; }
+</style>
+</head>
+<body>
+	<form action="#">
+		<input type="button" value="창 열기" onclick="winOpen()" /> <br />
+		<input type="button" value="창 선택" onclick="winFocus()" /> <br />
+		<input type="button" value="창 닫기" onclick="winClose()" /> <br />
+		<input type="button" value="창이 열려 있습니까?" onclick="winCheck()" /> <br />
+	</form>
+</body>
+</html>
