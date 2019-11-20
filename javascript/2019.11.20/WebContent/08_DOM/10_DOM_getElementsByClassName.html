@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>getElementsByClassName</title>
+<script type="text/javascript">
+
+	window.onload = function(){
+		// list는 배열
+		var list = document.getElementsByClassName("ex");
+		
+		for(var i=0, len=list.length; i<len; i++) {
+			list[i].style.color = "rgb(55,155,0)";
+		}
+	}
+
+</script>
+</head>
+<body>
+	<div>
+		<h1>DOM</h1>
+		<p class="ex">Document</p>
+		<p class="ex">Object</p>
+		<p class="ex">Model</p>
+	</div>
+</body>
+</html>

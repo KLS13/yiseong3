@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	
+		function viewAnswer() {
+			
+			var answer = document.querySelector("#answer");
+			var btn = document.querySelector("#btn");
+			
+			function show() {
+				btn.value = "정답 숨기기";
+				answer.style.visibility = "visible";
+			}
+			function hide() {
+				btn.value = "정답 보기";
+				answer.style.visibility = "hidden";
+			}
+				if( btn.value === "정답 보기" ) {
+					show();
+				}else {
+					hide();
+			}
+			
+		}
+	
+</script>
+</head>
+<body>
+	<h3> 다음 중 없는 태그는 ? </h3>
+	<div>
+		<ol>
+			<li>p</li>
+			<li>a</li>
+			<li>br</li>
+			<li>am</li>
+		</ol>
+	</div>
+	정답 보기 : [<span id="answer" style="visibility:hidden">4</span>] &nbsp;&nbsp;
+	<input id="btn" type="button" value="정답 보기" onclick="viewAnswer()" />
+</body>
+</html>

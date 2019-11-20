@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+window.onload = function() {
+	
+	var fruits = ["apple", "banana", "orange", "kiwi", "mango"];
+	// 1. <ul> 태그 만들기
+	var ul = document.createElement("ul");
+	// <li> 태그 5개 만들기
+	for(var i = 0, len = fruits.length; i<len; i++) {
+		
+			var li = document.createElement("li");
+			li.textContent = fruits[i];
+			ul.appendChild(li); // li 태그를 ul태그 안에 넣기
+		}
+	
+	// <ul> 태그를 <body> 태그에 넣기
+	document.body.appendChild(ul);
+	}
+
+</script>
+</head>
+<body>
+</body>
+</html>

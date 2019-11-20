@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	#box{
+		width : 100px;
+		height : 100px;
+		background-color : red;
+	}
+	#text{
+		line-height : 100px;
+		text-align: center;
+		font-weight: bold;
+		color : white;
+		font-size : 2em;
+		/* display : table-cell; */ /*테이블의 셀로 변경하면 수직 정렬이 가능하다 */
+	}
+</style>
+<script type="text/javascript">
+
+	window.onload = function() {
+		var i=0;
+		var anwlro = ["주", "노", "초", "파", "남","보","빨"];
+		var colors = ["orange", "yellow", "green", "blue", "navy", "purple", "red"];
+		var box = document.querySelector("#box");
+		var text = document.querySelector("#text");
+			setInterval(function() {
+				box.style.backgroundColor = colors[i];
+				text.innerHTML = anwlro[i];
+				i++;
+				if(i==7) {i=0;}  // i %= 7;  ,  i%= colors.length;
+			},1000);
+	}
+	
+	/* 1. setInterval
+	window.onload = function() {
+		var colors = ["red", "orange", "yellow", "green", "blue", "navy", "purple"];
+		var contents = ["빨", "주", "노", "초", "파", "남", "보"];
+		var i = 0;
+		var box = document.querySelector("#box");
+		var text = document.querySelector("#text");
+		setInterval(function() {
+			box.style.backgroundColor = colors[i];
+			text.innerHTML = contents[i];
+			i++;		// i : 0 ~ 6
+			// 방법1
+			// if (i == colors.length) { i = 0; }
+			// 방법2			
+			i %= colors.length;		// i : 0 ~ 6
+		}, 1000);
+	}
+	*/
+	
+	// 2. setTimeout
+	/*window.onload = function() {
+		var colors = ["red", "orange", "yellow", "green", "blue", "navy", "purple"];
+		var contents = ["빨", "주", "노", "초", "파", "남", "보"];
+		var i = 0;
+		var box = document.querySelector("#box");
+		var text = document.querySelector("#text");
+		function rainbow() {
+			box.style.backgroundColor = colors[i];
+			text.innerHTML = contents[i];
+			i++;		
+			i %= colors.length;		// i 가 7 이 되면 다시 0으로 회귀함!
+			setTimeout(rainbow, 1000);
+		}
+		rainbow();
+	}*/
+	
+</script>
+</head>
+<body>
+	<div id="box">
+		<p id="text">빨</p>
+	</div>
+</body>
+</html>

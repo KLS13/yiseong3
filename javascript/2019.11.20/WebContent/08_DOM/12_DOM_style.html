@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	function changeStyle() {
+		var h1 = document.querySelector("#heading");
+		// 1. CSS 속성 그대로 사용하는경우 (하이픈 없는 속성)
+		h1.style.color = "red";
+		h1.style.width = "400px";
+		h1.style.height = "100px";
+		h1.style.background = "pink";
+		
+		// 2. CSS 속성을 바꿔서 사용 ( 하이픈 있는 속성)
+		// 하이픈 제거하고 camel case 형식으로 변경
+		//     . 표기법사용
+		var box = document.querySelector("#box");
+		box.style.fontFamily = "궁서";
+		box.style.fontSize ="20px";
+		box.style.fontWeight = "bold";
+		
+		// 3. css 속성을 그대로 사용해야 한다면 !
+		//   []표기법 사용
+		var pList = document.querySelectorAll("p");
+		pList[2].style["color"] = "red";
+		pList[2].style["background-color"] = "yellow"; 
+	}
+	
+	window.onload = changeStyle;  // 괄호 없이!
+
+</script>
+</head>
+<body>
+	<h1 id="heading">DOM</h1>
+	<div id="box">
+		<p>Document</p>
+		<p>Object</p>
+		<p>Model</p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	window.onload = function() {
+		var seasons = ["spring" , "summer", "fall", "winter"];
+		var list = "";
+		
+		list += "<ul>";
+		for(var i = 0, len = seasons.length; i<len ; i++) {
+			list += "<li>"
+			list += seasons[i];
+			list += "</li>"
+		}
+		list += "</ul>";
+		document.getElementById("ex").innerHTML = list;
+	}
+
+</script>
+</head>
+<body>
+	<div id="ex"></div>
+</body>
+</html>

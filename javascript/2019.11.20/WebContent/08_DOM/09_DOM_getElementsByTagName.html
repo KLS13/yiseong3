@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>getElementsByTagName</title>
+<script type="text/javascript">
+
+	onload = function() {
+		var hobbies = ["reading", "fishing", "game", "movie", "sleep"];
+		// 모든 <h1> 태그를 가져와서 배열을 생성함.
+		var headLists = document.getElementsByTagName("h1");
+		
+		for(var i = 0, len = hobbies.length; i<len ; i++) {
+			headLists[i].innerHTML = hobbies[i];
+		}
+	}
+
+</script>
+</head>
+<body>
+	<h1></h1>
+	<h1></h1>
+	<h1></h1>
+	<h1></h1>
+	<h1></h1>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function sendData() {
+	// 1. 성명 : 필수 + 2~6자 사이
+	
+	// 2. 이메일 : @ 포함 + 첫 글자 @ 체크 + 마지막 글자 @ 체크
+	
+	// 3. 우편번호 : 5자인지? 숫자가 맞는지?
+			
+	// 4. 지역 : 선택했냐
+	var userName = document.forms.myForm.name;
+	var userZip = document.forms.myForm.zipCode;
+	var email = document.forms.myForm.email;
+	var indexOfAt = email.value.indexOf("@");
+	var length = email.value.length;
+	var region = document.forms.myForm.region;
+	
+		if ( userName.value.length <2 || userName.value.length >6) {
+			alert("아이디는 2~6자리수 입니다.");
+			userName.focus();			
+			return false;
+		}
+		
+		if (indexOfAt <1 || indexOfAt == length-1) {
+			alert("이메일의 올바른 형식이 아닙니다.");
+			return false;
+		}
+		
+		if ( userZip.value.length !=5 || isNaN(userZip.value) ) {
+			alert("우편번호는 반드시 5자리 숫자 입니다.");
+			userZip.focus();
+			return false;
+		}
+		
+		if( region.value == "0") {
+			alert("지역을 선택하세요");
+			return false;
+		}
+	
+	}
+</script>
+</head>
+<body>
+	<form name="myForm" action="#" onsubmit="return sendData()">
+		<table>
+			<tr>
+				<td>성명</td>
+				<td><input type="text" name="name" /></td>
+			</tr>
+			<tr>
+				<td>이메일</td>
+				<td><input type="text" name="email" /></td>
+			</tr>
+			<tr>
+				<td>우편번호</td>
+				<td><input type="text" name="zipCode" /></td>
+			</tr>
+			<tr>
+				<td>지역</td>
+				<td>
+					<select name="region">
+						<option value="0">::지역선택::</option>
+						<option value="1">서울</option>
+						<option value="2">인천</option>
+						<option value="3">경기</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th colspan="2">
+					<input type = "submit" value="전송" />
+				</th>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

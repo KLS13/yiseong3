@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	window.onload = function() {
+		var heading1 = document.querySelector("#heading1");
+		var heading2 = document.querySelector("#heading2");
+		heading1.innerHTML = "안녕";
+		heading2.innerHTML = "HELLO";
+		var list = document.querySelectorAll(".box");
+		list[0].style.color="red";
+		list[1].style.color="green";
+		
+		//첫번째 요소만 사용하게 됨
+		//var list = document.querySelector(".box");
+	}
+
+</script>
+</head>
+<body>
+	<h1 id="heading1">hello</h1>
+	<div class="box">Everyone</div>
+	
+	<h1 id="heading2">안녕</h1>
+	<div class="box">여러분</div>
+</body>
+</html>

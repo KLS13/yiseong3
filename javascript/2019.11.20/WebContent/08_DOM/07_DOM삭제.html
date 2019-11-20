@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOM삭제</title>
+<script type="text/javascript">
+
+	window.onload = function() {
+		
+		var box = document.getElementById("box");	// 제거대상의 부모!
+		var p1 = document.getElementById("p1");		// 제거대상!
+		var h1 = document.getElementsByTagName("h1");	// 제거대상! h1은 배열!
+		
+		// 제거 : 부모.removeChild(자식)
+		box.removeChild(p1);
+		document.body.removeChild(h1[0]);
+	}
+
+</script>
+</head>
+<body>
+	<h1>DOM삭제</h1>
+	<div id="box">
+		<p id="p1">첫 번째 문단</p>
+		<p id="p2">두 번째 문단</p>
+	</div>
+</body>
+</html>
