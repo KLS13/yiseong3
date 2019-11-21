@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이벤트</title>
+<script type="text/javascript">
+	
+	function init() {
+		document.body.style.backgroundColor = "silver";
+	}
+	
+	// 1. 이벤트 연결
+	// window.onload = init;	// 괄호 없음!
+	
+</script>
+</head>
+<body onload="init()">		<!-- 2. 이벤트 연결: 인라인 이벤트 -->
+	
+	<!-- 3. 이벤트 연결: 인라인 이벤트 -->
+	<h1 onclick="window.location.href='http://www.google.com'">구글로 이동</h1>
+	
+	
+	<!-- 4. 이벤트 해제 -->
+	<input type="button" value="클릭" id="btn" />
+	<script>
+		var btn = document.getElementById("btn");
+		btn.onclick = function() {
+			alert("눌렀니?");
+			btn.onclick = null;		// 이벤트 해제
+		}
+	</script>
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+

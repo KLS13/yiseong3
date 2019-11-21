@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이벤트</title>
+<script type="text/javascript">
+// 한 이벤트에 2개 이상의 함수를 연결하는 방법
+	function wrap() {
+	function myFunc1() {
+		alert("1번 함수");
+	}
+	function myFunc2() {
+		alert("2번 함수");
+	}
+	myFunc1();
+	myFunc2();
+}
+	window.onload = wrap;
+</script>
+</head>
+<body>
+
+</body>
+</html>

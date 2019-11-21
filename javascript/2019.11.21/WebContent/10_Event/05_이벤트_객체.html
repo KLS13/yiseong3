@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이벤트객체</title>
+<script type="text/javascript">
+
+	window.onload = function() {
+
+		var btn = document.getElementById("btn");
+		var content = document.getElementById("content");
+		
+		btn.onclick = function( e ) {
+			// 구 IE 호환을 위한 처리 (가장 먼저 처리!)
+			var event = e || window.event;
+			alert(event);
+			
+			// event 객체 확인
+			for (var p in event) {
+				content.innerHTML = "<h3>" + p + " : " + event[p] + "</h3>";
+			}
+		}
+		
+	}
+
+</script>
+</head>
+<body>
+	<input type="button" id="btn" value="클릭">
+	<div id="content"></div>
+</body>
+</html>

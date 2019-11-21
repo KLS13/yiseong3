@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>form</title>
+<style type="text/css">
+	.success { color: blue; }
+	.fail { color: red; }
+</style>
+<script type="text/javascript">
+	
+	// 자체 검정 기능 활용!
+	// <input type="number" min="1" max="10" />
+	
+	function check( target ) {
+		
+		var result = document.getElementById("result");
+		
+		// 1. valid 속성(유효하면 true)
+		if ( target.validity.valid  ) {	// min="1" max="10" 체크
+			result.innerHTML = "<span class='success'>정상 범위입니다.</span>";
+		} else {
+			result.innerHTML = "<span class='fail'>비정상 범위입니다.</span>";
+		}
+		
+		// 2. checkValidity() 함수(유효하면 true)
+		if ( target.checkValidity() ) {	// min="1" max="10" 체크
+			alert("정상 범위입니다.");
+		} else {
+			alert("비정상 범위입니다.");
+		}
+		
+	}
+</script>
+</head>
+<body>
+	<form name="myForm" action="#">
+		<label for="num">1 ~ 10 사이 정수</label>
+		<input id="num" type="number" min="1" max="10" />
+		<input type="button" value="검증" onclick="check(num)" />
+	</form>
+	<br /><br />
+	<div id="result"></div>
+</body>
+</html>

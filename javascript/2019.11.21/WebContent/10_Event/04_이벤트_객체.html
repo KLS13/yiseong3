@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이벤트객체</title>
+</head>
+<body>
+	<h1 id="heading">원래 제목입니다</h1>
+	<script type="text/javascript">
+		var h = document.getElementById("heading");
+		
+		// 이벤트 연결
+		h.onclick = change;
+		
+		// 이벤트 리스너
+		function change() {
+			alert(this);
+			// 이벤트 리스너가 등록된 객체 : 이벤트 객체
+			// 리스너내에서는 "this == 이벤트 객체"
+			this.innerHTML = "바뀐 제목입니다.";
+			this.style["background-color"] = "red";
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function check1() {
+		var target = document.forms.myForm.num1;
+		var resultcolor = document.querySelector("#result1");
+		resultcolor.style.color = "blue";
+		if(target.value >= 1 && target.value <=10) {
+			message ="정상 범위 입니다";
+			result1.style.color = "blue";
+			
+		}else {
+			message = "비정상 범위 입니다.";
+			result1.style.color = "red";
+		}
+		document.getElementById("result1").innerHTML = message;
+		return false;
+	}
+</script>
+</head>
+<body>
+	<form name="myForm" onsubmit="return check1()" action="#">
+		<label for="num1">1~10 사이 정수</label>
+		<input id="num1" type = "number" name="num1" />
+		<input type="submit" value="검증">
+	</form>
+	<br /><br />
+	<div id="result1"></div>
+</body>
+</html>
+
+<!-- 
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>form</title>
+<style type="text/css">
+	.success { color: blue; }
+	.fail { color: red; }
+</style>
+<script type="text/javascript">
+	function check1() {
+		
+		var target = document.forms.myForm.num1;
+		var result = document.getElementById("result1"); 
+
+		if (target.value >= 1 && target.value <= 10) {
+			message = "정상 범위입니다.";
+			result.setAttribute("class", "success");
+		} else {
+			message = "비정상 범위입니다.";
+			result.setAttribute("class", "fail");
+		}	
+		
+		result.innerHTML = message;	
+		return false;
+		
+	}
+</script>
+</head>
+<body>
+	<form name="myForm" onsubmit="return check1()" action="#">
+		<label for="num1">1 ~ 10 사이 정수</label>
+		<input id="num1" type="number" name="num1" />
+		<input type="submit" value="검증" />
+	</form>
+	<br /><br />
+	<div id="result1"></div>
+</body>
+</html>
+ -->
+
+
+
+
+
+
+

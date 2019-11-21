@@ -1,0 +1,52 @@
+<!-- 정규식 -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>정규표현식</title>
+<script type="text/javascript">
+	function regCheck(target) {
+		// 숫자 정규식
+		var regExp = /^[0-9]+$/;
+		/* 1. match
+		if( target.value.match(regExp) != null ) {
+			alert("숫자가 맞습니다.");
+		} else {
+			alert("숫자가 아닙니다.");
+		}
+		*/
+		
+		/* 2. search
+		if ( target.value.search(regExp) != -1) {
+			alert("숫자가 맞습니다.");
+		} else {
+			alert("숫자가 아닙니다.");
+		}
+		*/
+		
+		/* 3. exec()
+		if(regExp.exec(target.value)) {
+			alert("숫자가 맞습니다.");
+		} else {
+			alert("숫자가 아닙니다.");
+		}
+		*/
+		
+		// 4. test()
+		if(regExp.test(target.value)) {
+			alert("숫자가 맞습니다.");
+		} else {
+			alert("숫자가 아닙니다.");
+		} 
+		/* 3번 4번을 많이 쓴다 .  */
+	} 
+</script>
+</head>
+<body>
+	<form action="#">
+		<label for="num">숫자 입력</label>
+		<input id="num" type="text" name="num" />
+		<input type = "button" value="검증" onclick="regCheck(num)" />
+	</form>
+</body>
+</html>
