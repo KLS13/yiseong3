@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="#">
+		<input type="text" onkeydown="keyDownFunc()">
+		<div id="content"></div>
+	</form>
+	<script type="text/javascript">
+		function keyDownFunc() {
+			document.getElementById("content").innerHTML = event.keyCode;
+		}
+	</script>
+</body>
+</html>

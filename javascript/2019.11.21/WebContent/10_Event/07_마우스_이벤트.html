@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>마우스 이벤트</title>
+<script type="text/javascript">
+	function func1() {
+		document.getElementById("box").innerHTML = "안녕하세요";
+	}
+	function func2() {
+		document.getElementById("box").innerHTML = "안녕히잘가요";		
+	}
+	
+	function func3() {
+		document.getElementById("h1-box").innerHTML = "4번";
+	}
+	function func4() {
+		document.getElementById("h1-box").innerHTML = "정답보기";		
+	}
+</script>
+</head>
+<body>
+	<div id="box" onmouseover="func1()" onmouseout="func2()">
+	 	마우스를 올려보아요.
+	</div>
+	
+	<h4 id="h1-box" onmouseover="func3()" onmouseout="func4()">정답보기</h4> 
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>마우스 이벤트</title>
+<script type="text/javascript">
+
+	function func1(obj) {
+		obj.innerHTML = "마우스가 눌린 상태이다";
+	}
+
+	function func2(obj) {
+		obj.innerHTML = "마우스가 떨어진 상태";
+	}
+</script>
+</head>
+<body>
+	<div id="box" onmousedown="func1(this)" onmouseup="func2(this)">
+		마우스를 눌러보세요.
+	</div>
+</body>
+</html>
