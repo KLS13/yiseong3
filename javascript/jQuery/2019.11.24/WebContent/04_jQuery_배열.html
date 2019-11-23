@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>제이쿼리 배열</title>
+
+<script src="./js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+	$(function(){
+		// 1. 배열 준비
+		var list = [];
+		list.push("apple");
+		list.push("banana");
+		list.push("orange");
+		
+		// 2. 배열 순회
+		// $.each(list, function(index, item){ });
+		// 1) list = ["apple", "banana", "orange"]
+		// 2) index = 0, 1, 2
+		// 3) item = "apple", "banana", "orange"
+		$.each(list, function(index, item) {
+			document.body.innerHTML += "<h3>" + index + " : " + item + "</h3>";
+		});
+	});
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

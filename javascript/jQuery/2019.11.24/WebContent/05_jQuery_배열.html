@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>제이쿼리 배열</title>
+
+<script src="./js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+	$(function(){
+		// 1. 배열 준비
+		var list = [
+		{name:"james", age : 20},
+		{name:"alice", age : 21},
+		{name:"david", age : 22}
+		];
+		// 2. 배열 순회
+		// item : 객체 3개  , {name:"james", age : 20}  이거 하나가 아이템.
+		// 객체의 요소 : 객체.속성, 객체["속성"]
+		$.each(list,function(index, item) {
+			document.body.innerHTML += item.name	+ ":" + item["age"] + "<br />";
+		
+		});
+	});
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

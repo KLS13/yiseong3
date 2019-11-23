@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>제이쿼리 선택자</title>
+
+<style type="text/css">
+	h1 { color: navy; }	
+</style>
+
+<script src="./js/jquery-3.4.1.js"></script>
+
+<script type="text/javascript">
+
+	$(function(){
+		
+		$("h1").css({"color":"crimson"});	// 인라인 스타일 방식으로 추가(우선 순위가 가장 높음!)
+		$(".wrap").css({"background-color":"pink"});
+		$("#web").css({"list-style-type":"square"});
+		$("ul li").css({"font-size":"20px"});
+		
+		$(".html").css("color", "red");
+		$(".css").css("color", "green")
+		
+	});
+	
+</script>
+
+</head>
+<body>
+	<h1>jQuery</h1>
+	<div class="wrap">
+		<ul id="web">
+			<li class="html">html</li>
+			<li class="css">css</li>
+			<li class="javascript">javascript</li>
+			<li class="jquery">jquery</li>
+			<li class="ajax">ajax</li>
+		</ul>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

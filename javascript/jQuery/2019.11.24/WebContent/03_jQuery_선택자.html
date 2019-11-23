@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>제이쿼리 선택자</title>
+ <script src="./js/jquery-3.4.1.js"></script>
+ <script type="text/javascript">
+ 	$(function() {
+ 		// $("ul li").css("color","red");
+ 		$("ul>li").css("color","blue");
+ 	});
+ </script>
+</head>
+<body>
+	<ul>
+		<li>과일
+			<ul>
+				<li>사과
+					<ul>
+						<li>꽃사과</li>
+						<li>풋사과</li>
+						<li>홍로</li>
+					</ul>
+				</li>
+				<li>배</li>
+				<li>감귤</li>
+			</ul>
+		</li>
+		<li>어류
+			<ul>
+				<li>꽃게</li>
+				<li>새우</li>
+				<li>방어</li>
+			</ul>
+		</li>
+	</ul>
+
+</body>
+</html>
