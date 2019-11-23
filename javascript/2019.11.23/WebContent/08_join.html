@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>회원가입</title>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+<style style="text/css">
+    body {
+           font-family: 'Nanum Gothic', sans-serif;
+       }
+       table {
+           width: 700px; height: 500px;
+       }
+       table, th, td {
+           border: 1px solid gray;
+           border-collapse: collapse;
+           text-align: left;		/* 가로 정렬 */
+           vertical-align: middle;	/* 세로 정렬 */
+           padding: 0 5px;
+       }
+       td:nth-child(1) {
+       	font-weight: bold;
+       	width: 100px;
+       }
+	.title {
+		background:#222222;
+		text-align: center;
+		color: white;
+	}
+	input[type=text], input[type=password] {
+		width: 200px;
+	}
+</style>
+</head>
+<body>
+	<h1>회원가입</h1>
+    <form action="#" method="post">
+		<table>
+			<tr>
+				<td colspan="2" class="title">회원기본정보</td>
+			</tr>
+			<tr>
+				<td><label for="id">아이디</label></td>
+				<td><input type="text" id="id" name="id" placeholder="※8-16자 소문자+숫자" autofocus /> </td>
+			</tr>
+			<tr>
+				<td><label for="pw">비밀번호</label></td>
+				<td><input type="password" id="pw" name="pw" placeholder="※8-16자 대문자+소문자+숫자" /> </td>
+			</tr>
+			<tr>
+				<td><label for="checkpw">비밀번호확인</label></td>
+				<td><input type="password" id="checkpw" name="checkpw" /></td>
+			</tr>
+			<tr>
+				<td><label for="email1">이메일</label></td>
+				<td>
+					<input type="text" id="email1" name="email1" />
+					 @ 
+					<input type="text" id="email2" list="domain" name="email2" placeholder="직접 입력" />
+					<datalist id="domain">
+						<option value="naver.com">naver.com</option>
+						<option value="hanmail.net">hanmail.net</option>
+						<option value="gmail.com">gmail.com</option>
+					</datalist>
+				</td>
+			</tr>
+			<tr>
+				<td>이름</td>
+				<td><input type="text" id="name" name="name" /></td>
+			</tr>
+			<tr>
+				<td colspan="2" class="title">개인정보</td>
+			</tr>
+			<tr>
+				<td>주민등록번호</td>
+				<td>
+					<input type="text" style="width: 100px;" name="sn1" id="sn1" />
+					-
+					<input type="password" style="width: 100px;" name="sn2" id="sn2" />
+					예) 123456-1234567
+					<input type="button" value="확인" name="confirm" onclick="confirmSN(this.form)"/>
+				</td>
+			</tr>
+			<tr>
+				<td>생일</td>
+				<td>
+					<input type="text" style="width:80px; background:lightgray;" id="years" name="year" readonly />년
+					<input type="text" style="width:80px; background:lightgray;" id="month" name="month" readonly />월
+					<input type="text" style="width:80px; background:lightgray;" id="day" name="day" readonly />일
+        		</td>
+    		</tr>
+			<tr>
+				<td>성별</td>
+				<td>
+					<label><input type="radio" name="gender" value="male">남</label>
+					<label><input type="radio" name="gender" value="female">여</label>
+				</td>
+			</tr>
+			<tr>
+				<td>관심분야</td>
+				<td>
+					<label><input type="checkbox" name="interest" value="travel" />여행</label>
+					<label><input type="checkbox" name="interest" value="movie" />영화</label>
+					<label><input type="checkbox" name="interest" value="reading" />독서</label>
+					<label><input type="checkbox" name="interest" value="music" />음악</label>
+					<label><input type="checkbox" name="interest" value="" />관심없음</label>
+				</td>
+			</tr>
+			<tr>
+				<td>자기소개</td>
+				<td>
+					<textarea name="self" cols="40" rows="8"></textarea>
+				</td>
+			</tr>
+		</table>
+		<br/>
+		<input type="button" value="회원가입" onclick="validate(this.form)" />
+		<input type="reset" value="다시입력" />
+    </form>
+    <script type="text/javascript">
+	
+	function validate( f ) {
+
+		var regId = /^[0-9a-z]{8,16}$/;		// 아이디 정규식
+		var regPw = /^[0-9a-zA-Z]{8,16}$/;	// 비밀번호 정규식
+		var regName = /^[가-힣]{2,6}$/;		// 성명 정규식
+		var regEmail = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;	// 이메일 정규식
+		var regPid1 = /^\d{6}$/;
+		var regPid2 = /^\d{7}$/;
+		
+		// 1. 아이디 체크
+		if ( !regId.exec(f.id.value) ) {
+			alert("아이디: 8~16자, 소문자+숫자");
+			f.id.value = "";
+			f.id.focus();
+			return;
+		}
+		
+		// 2. 비밀번호 체크
+		if ( !regPw.exec(f.pw.value) ) {
+			alert("비밀번호: 8~16자, 대문자+소문자+숫자");
+			f.pw.value = "";
+			f.pw.focus();
+			return;
+		} else if ( f.pw.value != f.checkpw.value ) {
+			alert("비밀번호를 확인하세요.");
+			f.pw.value = "";
+			f.checkpw.value = "";
+			f.pw.focus();
+			return;
+		}
+		
+		// 3. 이메일 체크
+		var email = f.email1.value + "@" + f.email2.value;
+		if ( !regEmail.exec(email) ) {
+			alert("올바른 형식의 이메일이 아닙니다. 다시 입력하세요.");
+			f.email1.value = "";
+			f.email2.value = "";
+			f.email1.focus();
+			return;
+		}
+		
+		// 4. 이름 체크
+		if ( !regName.exec(f.name.value) ) {
+			alert("이름: 2~6자, 한글");
+			f.name.focus();
+			return;
+		}
+		
+		// 5. 주민등록번호 체크
+		if ( !regPid1.exec(f.sn1.value) ) {
+			alert("주민등록번호 앞자리: 6자리, 숫자");
+			f.sn1.focus();
+			return;
+		} else if ( !regPid2.exec(f.sn2.value) ) {
+			alert("주민등록번호 뒷자리: 7자리, 숫자");
+			f.sn2.focus();
+			return;
+		}
+		
+		// 6. 관심분야 체크
+		if ( !f.interest[0].checked && 
+			 !f.interest[1].checked &&
+			 !f.interest[2].checked &&
+			 !f.interest[3].checked &&
+			 !f.interest[4].checked ) {
+			alert("관심분야를 선택하세요.");
+			return;
+		}
+		
+		// 7. 자기소개 체크
+		if ( f.self.value == "" ) {
+			alert("자기소개를 입력하세요.");
+			f.self.focus();
+			return;
+		}
+		
+		alert("회원가입에 성공했습니다.");
+		// f.submit();
+	}
+	
+	function confirmSN (f) {
+		
+		// 주민등록번호 검증
+		// 주민등록번호 각 자리를 다음 수와 곱해서 합을 구한다. (마지막 자리는 사용 안 함)
+		// 2 3 4 5 6 7 - 8 9 1 2 3 4 X
+		// (11-합%11)%10 == 마지막자리 : 올바른 주민등록번호
+		
+		var total = 0;
+		for ( var i = 0; i < f.sn1.value.length; i++ ) {
+			total += (f.sn1.value.charAt(i) * (i+2));
+		}
+		for ( var i = 0; i < f.sn2.value.length-1; i++ ) {
+			if ( i < 2 ) {
+				total += (f.sn2.value.charAt(i) * (8+i));
+			} else {
+				total += (f.sn2.value.charAt(i) * i);
+			}
+		}
+		
+		if ( (11 - (total % 11)) % 10 != parseInt(f.sn2.value.charAt(6)) ) {
+			alert("올바른 주민등록번호가 아닙니다.");
+			f.sn1.value = "";
+			f.sn2.value = "";
+			f.sn1.focus();
+			return;
+		}
+		
+		// 생년월일 자동 등록
+		switch ( f.sn2.value.charAt(0) ) {
+		case "1":	case "2":	case "5":	case "6":
+			f.year.value = "19" + f.sn1.value.substring(0, 2);	// 0이상 2미만
+			break;
+		case "3":	case "4":	case "7":	case "8":
+			f.year.value = "20" + f.sn1.value.substring(0, 2);
+		}
+		f.month.value = f.sn1.value.substring(2, 4);
+		f.day.value = f.sn1.value.substring(4, 6);
+		
+		// 성별 자동 선택
+		if ( f.sn2.value.charAt(0) % 2 == 0 ) {
+			f.gender.value = "female";
+		} else {
+			f.gender.value = "male";
+		}
+	}
+
+</script>
+</body>
+</html>
